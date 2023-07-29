@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
+import { useAnswerStore } from '@/stores/answers';
 
 interface QuizOption {
     text: string
@@ -7,6 +8,8 @@ interface QuizOption {
 }
 
 const msg = ref("")
+
+const answers = useAnswerStore()
 
 const options = ref([
     { text: 'Option 1' },
@@ -20,29 +23,34 @@ function checkAnswer(selectedOption: QuizOption): void {
     if (selectedOption.isCorrectAnswer) {
         console.log("Correct Answer")
         msg.value = "correct!"
+        answers.update({ answer1: true })
     }
     else {
         console.log("Wrong Answer")
         msg.value = "wrong"
+        answers.answers.answer1 = false
     }
 
 }
 
 onMounted(() => {
+
 })
+
 </script>
 
 <template>
     <div>
-        <span>{{ questionText }}</span>
+        <div>{{ questionText }}</div>
 
-        <div>
+        <div v-if="!answers.answers.answer1">
             <button v-for="option in options" :key="option.text" @click="checkAnswer(option)">
                 {{ option.text }}
             </button>
         </div>
 
-        <span>{{ msg }}</span>
+        <p>{{ msg }}</p>
+
 
     </div>
 </template>

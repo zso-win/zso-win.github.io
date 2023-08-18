@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
+import TheBanner from './components/TheBanner.vue';
 </script>
 
 <template>
@@ -9,6 +10,8 @@ import { RouterLink, RouterView } from 'vue-router'
       <RouterLink to="/quiz">Quiz</RouterLink>
     </nav>
   </header>
+
+  <TheBanner></TheBanner>
 
   <RouterView />
 </template>
@@ -46,7 +49,7 @@ nav a:first-of-type {
 
 @media (min-width: 1024px) {
   header {
-    display: flex;
+    display: grid;
     place-items: center;
     padding-right: calc(var(--section-gap) / 2);
   }

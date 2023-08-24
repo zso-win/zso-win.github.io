@@ -11,7 +11,7 @@ import TheBanner from './components/TheBanner.vue';
     </nav>
   </header>
 
-  <TheBanner></TheBanner>
+  <TheBanner class="tb-space"></TheBanner>
 
   <RouterView />
 </template>
@@ -27,6 +27,10 @@ nav {
   font-size: 12px;
   text-align: center;
   margin-top: 2rem;
+}
+
+.tb-space {
+  margin: 10px 0px;
 }
 
 nav a.router-link-exact-active {

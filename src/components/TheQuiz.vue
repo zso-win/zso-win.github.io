@@ -13,29 +13,29 @@ const msg = ref("")
 const answers = useAnswerStore()
 
 const options = ref([
-    { text: 'Option 1' },
-    { text: 'Option 2' },
-    { text: 'Option 3', isCorrectAnswer: true },
-    { text: 'Option 4' }]);
-const questionText = ref("This is the question...")
+    { text: 'September' },
+    { text: 'Oktober' },
+    { text: 'November', isCorrectAnswer: true },
+    { text: 'Dezember' }]);
+const questionText = ref("Wann findet die nächste Ausgabe der Wintimäss statt?")
 
 function checkAnswer(selectedOption: QuizOption): void {
 
     if (selectedOption.isCorrectAnswer) {
         console.log("Correct Answer")
-        msg.value = "correct!"
+        msg.value = "Das ist richtig!"
         answers.update({ answer1: true })
     }
     else {
         console.log("Wrong Answer")
-        msg.value = "wrong"
+        msg.value = "Leider falsch."
         answers.answers.answer1 = false
     }
 
 }
 
 function reset(): void {
-    answers.update({ answer1: undefined })
+    answers.update({ answer1: false })
 }
 
 onMounted(() => {
@@ -58,7 +58,6 @@ onMounted(() => {
                     {{ option.text }}
                 </n-button>
             </n-space>
-
         </div>
 
         <p>{{ msg }}</p>
@@ -70,4 +69,10 @@ onMounted(() => {
 
 
     </div>
-</template>
+</template>4362
+
+<style>
+p {
+    margin-top: 10px;
+}
+</style>

@@ -13,6 +13,24 @@ const router = createRouter({
       path: '/quiz',
       name: 'quiz',
       component: () => import('../views/QuizView.vue')
+    },
+    {
+      path: '/question',
+      name: 'question',
+      component: () => import('../views/QuestionView.vue'),
+      props: { isQuestion: true }
+    },
+    {
+      path: '/correctAnswer',
+      name: 'correctAnswer',
+      component: () => import('../views/QuestionView.vue'),
+      props: { isCorrect: true }
+    },
+    {
+      path: '/wrongAnswer',
+      name: 'wrongAnswer',
+      component: () => import('../views/QuestionView.vue'),
+      props: { isWrong: true }
     }
 
   ]

@@ -35,7 +35,7 @@ function checkAnswer(selectedOption: QuizOption): void {
 }
 
 function reset(): void {
-    answers.update({ answer1: false })
+    answers.update({ answer1: false, answer2: false })
 }
 
 onMounted(() => {

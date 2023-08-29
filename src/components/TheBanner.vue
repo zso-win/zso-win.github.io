@@ -7,6 +7,10 @@ import { useAnswerStore } from '@/stores/answers';
 const answerStore = useAnswerStore()
 
 const healthSolved = computed(() => answerStore.answers.answer1)
+const civilSolved = computed(() => answerStore.answers.answer2)
+
+const policeSolved = false
+const fireSolved = false
 
 onMounted(() => {
 

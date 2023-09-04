@@ -48,7 +48,7 @@ onMounted(() => {
 <template>
     <div>
         <n-space justify="center">
-            <n-image width="320" src="src/assets/ambulance.jpg" />
+            <n-image width="320" src="@/assets/ambulance.jpg" />
         </n-space>
 
         <p>{{ questionText }}</p>

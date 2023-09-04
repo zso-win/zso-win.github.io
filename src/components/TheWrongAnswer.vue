@@ -14,7 +14,7 @@ onMounted(() => {
 <template>
     <div>
         <n-space justify="center">
-            <n-image width="320" src="src/assets/fire_fighters.avif" />
+            <n-image width="400" src="src/assets/fire_fighters.jpg" />
         </n-space>
 
         <p>Die 117 ist die Notfallnummer der Polizei.</p>

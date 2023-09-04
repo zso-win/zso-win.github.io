@@ -36,6 +36,7 @@ function checkAnswer(selectedOption: QuizOption): void {
 
 function reset(): void {
     answers.update({ answer1: false, answer2: false })
+    msg.value = ""
 }
 
 onMounted(() => {
@@ -50,11 +51,11 @@ onMounted(() => {
             <n-image width="320" src="src/assets/ambulance.jpg" />
         </n-space>
 
-        <div>{{ questionText }}</div>
-
+        <p>{{ questionText }}</p>
+        <n-divider />
         <div v-if="!answers.answers.answer1">
             <n-space vertical>
-                <n-button block v-for="option in options" :key="option.text" @click="checkAnswer(option)">
+                <n-button size="medium" color="#f5dab8" text-color="#000" block v-for="option in options" :key="option.text" @click="checkAnswer(option)">
                     {{ option.text }}
                 </n-button>
             </n-space>
@@ -69,10 +70,6 @@ onMounted(() => {
 
 
     </div>
-</template>4362
+</template>
 
-<style>
-p {
-    margin-top: 10px;
-}
-</style>
+<style></style>

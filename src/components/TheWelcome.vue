@@ -11,7 +11,7 @@ import CommunityIcon from './icons/IconDocumentation.vue'
     </template>
     <template #heading>Wintimäss Quiz</template>
 
-    Schnitzeljagd durch den Schadenplatz von Schutz und Rettung Winterthur
+    Schnitzeljagd durch den Schadenplatz von <i>Schutz und Intervention</i> Winterthur
   </WelcomeItem>
 
   <WelcomeItem>

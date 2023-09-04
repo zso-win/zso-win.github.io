@@ -16,10 +16,10 @@ onMounted(() => {
 <template>
     <div>
         <n-space justify="center">
-            <n-image width="320" src="src/assets/ambulance.jpg" />
+            <n-image width="320" src="src/assets/fire_fighters.avif" />
         </n-space>
 
-        <p>Die richtige Antwort.</p>
+        <p>118 ist richtige Antwort.</p>
 
     </div>
 </template>

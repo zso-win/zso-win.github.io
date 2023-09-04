@@ -14,10 +14,10 @@ onMounted(() => {
 <template>
     <div>
         <n-space justify="center">
-            <n-image width="320" src="src/assets/ambulance.jpg" />
+            <n-image width="320" src="src/assets/fire_fighters.avif" />
         </n-space>
 
-        <p>Die Frage steht hier.</p>
+        <p>Welche Notfallnummer musst du in einem solchen Notfall anrufen?</p>
 
     </div>
 </template>

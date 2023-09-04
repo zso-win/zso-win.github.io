@@ -16,7 +16,7 @@ onMounted(() => {
 <template>
     <div>
         <n-space justify="center">
-            <n-image width="400" src="@/assets/fire_fighters.jpg" />
+            <img width="400" src="@/assets/fire_fighters.jpg" />
         </n-space>
 
         <p>118 ist richtige Antwort.</p>

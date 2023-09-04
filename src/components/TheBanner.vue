@@ -1,16 +1,13 @@
 <script setup lang="ts">
 
 import { computed, onMounted } from 'vue';
-import { NSpace, NImageGroup } from 'naive-ui'
+import { NSpace, NImageGroup, NProgress } from 'naive-ui'
 import { useAnswerStore } from '@/stores/answers';
 
 const answerStore = useAnswerStore()
 
-const healthSolved = computed(() => answerStore.answers.answer1)
-const civilSolved = computed(() => answerStore.answers.answer2)
-
-const policeSolved = false
-const fireSolved = false
+const healthProgress = computed(() => answerStore.answers.answer1 ? 50 : 0)
+const zsProgress = computed(() => answerStore.answers.answer2 ? 50 : 0)
 
 onMounted(() => {
 
@@ -19,47 +16,36 @@ onMounted(() => {
 </script>
 
 <style scoped>
-n-avatar {
-    padding: 10px;
-    width: 60px;
-    font-size: xx-large;
-    display: flex;
-    justify-content: center;
-}
-
-.notSolved {
-    opacity: 0.25;
-}
-
-.police {
-    color: white;
-    background-color: blue;
-}
-
-.fire {
-    background-color: red;
-    color: yellow;
-}
-
-.health {
-    background-color: yellow;
-    color: red;
-}
-
-.civil {
-    background-color: orange;
-    color: blue;
+.bbox {
+    background-color: moccasin;
+    padding: 10px 0px 5px 0px;
 }
 </style>
 
 <template>
-    <div>
+    <div class="bbox">
         <n-image-group>
             <n-space justify="space-around">
-                <n-avatar :class="{ notSolved: !policeSolved }" class="police">P</n-avatar>
-                <n-avatar :class="{ notSolved: !healthSolved }" class="health">S</n-avatar>
-                <n-avatar :class="{ notSolved: !fireSolved }" class="fire">F</n-avatar>
-                <n-avatar :class="{ notSolved: !civilSolved }" class="civil">Z</n-avatar>
+                <div>
+                    <img width="60" src="@/assets/adp.png" />
+                    <n-progress type="line" status="warning" :percentage="0" indicator-placement="inside" />
+                    <p>Polizei</p>
+                </div>
+                <div>
+                    <img width="60" src="@/assets/adfw.png" />
+                    <n-progress type="line" status="warning" :percentage="100" indicator-placement="inside" />
+                    <p>Feuerwehr</p>
+                </div>
+                <div>
+                    <img width="60" src="@/assets/ads.png" />
+                    <n-progress type="line" status="warning" :percentage="healthProgress" indicator-placement="inside" />
+                    <p>Sanität</p>
+                </div>
+                <div>
+                    <img width="60" src="@/assets/adzs.png" />
+                    <n-progress type="line" status="warning" :percentage="zsProgress" indicator-placement="inside" />
+                    <p>Zivilschutz</p>
+                </div>
             </n-space>
         </n-image-group>
         <n-space></n-space>

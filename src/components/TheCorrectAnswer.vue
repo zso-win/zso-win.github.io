@@ -1,14 +1,23 @@
 <script setup lang="ts">
-import { onMounted } from 'vue'
+import { onMounted, ref } from 'vue'
 
 import { NSpace, NImage } from 'naive-ui'
 import { useAnswerStore } from '@/stores/answers';
+import { useQuestionStore } from '@/stores/questions';
 
+const msg = ref("")
 
 const answers = useAnswerStore()
+const questions = useQuestionStore()
 
 onMounted(() => {
-    answers.update({ answer2: true })
+    if (questions.questions.question2) {
+        answers.update({ answer2: true })
+        msg.value = "118 ist die richtige Antwort."
+    }
+    else {
+        msg.value = "118 ist die Notfallnummer der Feuerwehr."
+    }
 })
 
 </script>
@@ -19,7 +28,7 @@ onMounted(() => {
             <n-image width="400" src="assets/fire_fighters.jpg" />
         </n-space>
 
-        <p>118 ist richtige Antwort.</p>
+        <p>{{ msg }}</p>
 
     </div>
 </template>

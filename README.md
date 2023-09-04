@@ -44,3 +44,6 @@ npm run build
 ```sh
 npm run lint
 ```
+
+## Winti Mäss Quiz
+Banner Icons: [Adapted from here](https://www.svgrepo.com/collection/young-employees/)

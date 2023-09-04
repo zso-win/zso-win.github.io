@@ -2,6 +2,7 @@
 import { ref, onMounted } from 'vue'
 import { useAnswerStore } from '@/stores/answers';
 import { NButton, NDivider, NSpace, NImage } from 'naive-ui'
+import { useQuestionStore } from '@/stores/questions';
 
 interface QuizOption {
     text: string
@@ -11,6 +12,7 @@ interface QuizOption {
 const msg = ref("")
 
 const answers = useAnswerStore()
+const questions = useQuestionStore()
 
 const options = ref([
     { text: 'September' },
@@ -36,6 +38,7 @@ function checkAnswer(selectedOption: QuizOption): void {
 
 function reset(): void {
     answers.update({ answer1: false, answer2: false })
+    questions.update({ question1: false, question2: false })
     msg.value = ""
 }
 

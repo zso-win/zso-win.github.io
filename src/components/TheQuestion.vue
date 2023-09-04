@@ -2,11 +2,13 @@
 import { onMounted } from 'vue'
 
 import { NSpace, NImage } from 'naive-ui'
+import { useQuestionStore } from '@/stores/questions';
 
 
+const questions = useQuestionStore()
 
 onMounted(() => {
-
+    questions.update({ question2: true })
 })
 
 </script>

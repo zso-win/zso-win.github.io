@@ -2,8 +2,14 @@ import { defineStore } from 'pinia'
 import { useStorage } from '@vueuse/core'
 
 export class Questions {
-  question1: boolean = true
-  question2: boolean = false
+  polQuestion1: boolean = false
+  polQuestion2: boolean = false
+  sanQuestion1: boolean = false
+  sanQuestion2: boolean = false
+  fwQuestion1: boolean = false
+  fwQuestion2: boolean = false
+  zsQuestion1: boolean = false
+  zsQuestion2: boolean = false
 }
 
 

@@ -8,7 +8,7 @@ import { useQuestionStore } from '@/stores/questions';
 const questions = useQuestionStore()
 
 onMounted(() => {
-    questions.update({ question2: true })
+    questions.update({ fwQuestion2: true })
 })
 
 </script>

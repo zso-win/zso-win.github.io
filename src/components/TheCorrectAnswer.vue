@@ -11,8 +11,8 @@ const answers = useAnswerStore()
 const questions = useQuestionStore()
 
 onMounted(() => {
-    if (questions.questions.question2) {
-        answers.update({ answer2: true })
+    if (questions.questions.fwQuestion2) {
+        answers.update({ fwAnswer2: true })
         msg.value = "118 ist die richtige Antwort."
     }
     else {

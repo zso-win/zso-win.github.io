@@ -1,22 +1,36 @@
 <script setup lang="ts">
-import TheQuestion from '@/components/TheQuestion.vue';
-import TheCorrectAnswer from '../components/TheCorrectAnswer.vue'
-import TheWrongAnswer from '../components/TheWrongAnswer.vue'
+
+import ZsQuestion1 from '@/components/ZsQuestion1.vue';
+import { useAnswerStore } from '@/stores/answers';
+import { useQuestionStore } from '@/stores/questions';
+import { resources } from '@/views/resources'
 
 const props = defineProps({
-  isQuestion: Boolean,
-  isCorrect: Boolean,
-  isWrong: Boolean
+  id: String,
+  org: String
+})
+
+let key = `${props.org}_${props.id}`
+
+const answers = useAnswerStore()
+const questions = useQuestionStore()
+
+const res = resources[key]
+
+// TODO add update logic for questions
+if (props.id == "q") {
+  questions.update({})
 }
 
-)
+// TODO add update logic for answers
+if (res["rightAnswer"]) {
+  answers.update({})
+}
 
 </script>
 
 <template>
   <main>
-    <TheQuestion v-if="isQuestion" />
-    <TheCorrectAnswer v-if="isCorrect" />
-    <TheWrongAnswer v-if="isWrong" />
+    <ZsQuestion1 :msg="res.msg" :img="res.img" />
   </main>
 </template>

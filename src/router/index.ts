@@ -33,6 +33,12 @@ const router = createRouter({
       name: 'wrongAnswer',
       component: () => import('../views/QuestionView.vue'),
       props: { isWrong: true }
+    },
+    {
+      path: '/wm/:org/:id',
+      name: 'wm',
+      component: () => import('../views/QuestionView.vue'),
+      props: true
     }
 
   ]

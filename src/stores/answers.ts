@@ -4,10 +4,10 @@ import { useStorage } from '@vueuse/core'
 export class Answers {
   answer1: boolean = false
   answer2: boolean = false
-  polAnswer1: boolean = false
-  polAnswer2: boolean = false
-  sanAnswer1: boolean = false
-  sanAnswer2: boolean = false
+  spAnswer1: boolean = false
+  spAnswer2: boolean = false
+  rdAnswer1: boolean = false
+  rdAnswer2: boolean = false
   fwAnswer1: boolean = false
   fwAnswer2: boolean = false
   zsAnswer1: boolean = false

@@ -5,13 +5,13 @@ import { NSpace, NImageGroup, NProgress, NButton } from 'naive-ui'
 import { useAnswerStore } from '@/stores/answers';
 import { useProgressStore } from '@/stores/progress';
 
-const answerStore = useAnswerStore()
+const answrStr = useAnswerStore()
 const progressStore = useProgressStore()
 
-const sanProgress = computed(() => (answerStore.answers.sanAnswer1 ? 50 : 0) + (answerStore.answers.sanAnswer2 ? 50 : 0))
-const polProgress = computed(() => (answerStore.answers.polAnswer1 ? 50 : 0) + (answerStore.answers.polAnswer2 ? 50 : 0))
-const fwProgress = computed(() => (answerStore.answers.fwAnswer1 ? 50 : 0) + (answerStore.answers.fwAnswer2 ? 50 : 0))
-const zsProgress = computed(() => (answerStore.answers.zsAnswer1 ? 50 : 0) + (answerStore.answers.zsAnswer2 ? 50 : 0))
+const rdProgress = computed(() => (answrStr.answers.get("rd1") ? 50 : 0) + (answrStr.answers.get("rd2") ? 50 : 0))
+const spProgress = computed(() => (answrStr.answers.get("sp1") ? 50 : 0) + (answrStr.answers.get("sp2") ? 50 : 0))
+const fwProgress = computed(() => (answrStr.answers.get("fw1") ? 50 : 0) + (answrStr.answers.get("fw2") ? 50 : 0))
+const zsProgress = computed(() => (answrStr.answers.get("zs1") ? 50 : 0) + (answrStr.answers.get("zs2") ? 50 : 0))
 
 const finished = computed(() => progressStore.progress.hasFinished)
 
@@ -34,7 +34,7 @@ onMounted(() => {
             <n-space justify="space-around">
                 <div>
                     <img width="60" src="@/assets/adp.png" />
-                    <n-progress type="line" status="warning" :percentage="polProgress" indicator-placement="inside" />
+                    <n-progress type="line" status="warning" :percentage="spProgress" indicator-placement="inside" />
                     <p>Polizei</p>
                 </div>
                 <div>
@@ -44,8 +44,8 @@ onMounted(() => {
                 </div>
                 <div>
                     <img width="60" src="@/assets/ads.png" />
-                    <n-progress type="line" status="warning" :percentage="sanProgress" indicator-placement="inside" />
-                    <p>Sanität</p>
+                    <n-progress type="line" status="warning" :percentage="rdProgress" indicator-placement="inside" />
+                    <p>Rettungs-<br>dienst</p>
                 </div>
                 <div>
                     <img width="60" src="@/assets/adzs.png" />

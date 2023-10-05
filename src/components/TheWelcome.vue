@@ -4,8 +4,19 @@ import SupportIcon from './icons/IconSupport.vue'
 import CommunityIcon from './icons/IconDocumentation.vue'
 import { useProgressStore } from '@/stores/progress';
 import { NButton } from 'naive-ui';
+import { useAnswerStore } from '@/stores/answers';
+import { useQuestionStore } from '@/stores/questions';
 
-const progressStore = useProgressStore()
+const answers = useAnswerStore()
+const questions = useQuestionStore()
+const progress = useProgressStore()
+
+function reset(): void {
+  answers.reset()
+  questions.reset()
+  progress.reset()
+}
+
 
 </script>
 
@@ -31,6 +42,7 @@ const progressStore = useProgressStore()
     Wenn du alle Fragen beantwortet hast, kannst du am Hauptstand deinen Gewinn abholen!
   </WelcomeItem>
 
-  <n-button @click="progressStore.start">Schnitzeljagd starten!</n-button>
-  <n-button @click="progressStore.finish">Schnitzeljagd beenden!</n-button>
+  <n-button @click="progress.start">Schnitzeljagd starten!</n-button>
+  <n-button @click="progress.finish">Schnitzeljagd beenden!</n-button>
+  <n-button block @click="reset">Reset</n-button>
 </template>

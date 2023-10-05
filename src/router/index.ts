@@ -12,31 +12,8 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/quiz',
-      name: 'quiz',
-      component: () => import('../views/QuizView.vue')
-    },
-    {
-      path: '/question',
-      name: 'question',
-      component: () => import('../views/QuestionView.vue'),
-      props: { isQuestion: true }
-    },
-    {
-      path: '/correctAnswer',
-      name: 'correctAnswer',
-      component: () => import('../views/QuestionView.vue'),
-      props: { isCorrect: true }
-    },
-    {
-      path: '/wrongAnswer',
-      name: 'wrongAnswer',
-      component: () => import('../views/QuestionView.vue'),
-      props: { isWrong: true }
-    },
-    {
-      path: '/wm/:org/:id',
-      name: 'wm',
+      path: '/:org/:id/:name',
+      name: 'panel',
       component: () => import('../views/QuestionView.vue'),
       props: true
     }

@@ -7,7 +7,6 @@ import TheBanner from './components/TheBanner.vue';
   <header>
     <nav>
       <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/quiz">Quiz</RouterLink>
     </nav>
   </header>
 

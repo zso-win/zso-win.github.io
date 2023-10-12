@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import TheBanner from './components/TheBanner.vue';
+
 </script>
 
 <template>
@@ -11,7 +12,6 @@ import TheBanner from './components/TheBanner.vue';
   </header>
 
   <TheBanner class="tb-space"></TheBanner>
-
   <RouterView />
 </template>
 

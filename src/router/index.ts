@@ -16,6 +16,11 @@ const router = createRouter({
       name: 'panel',
       component: () => import('../views/QuestionView.vue'),
       props: true
+    },
+    {
+      path: '/gettheprize',
+      name: 'end',
+      component: () => import('../views/PrizeView.vue'),
     }
 
   ]
@@ -23,7 +28,10 @@ const router = createRouter({
 
 router.beforeEach((to, _from) => {
   const progressStore = useProgressStore()
-  if (progressStore.progress.hasFinished && to.name != 'quiz') return { name: 'quiz' }
+  if (progressStore.progress.hasFinished) {
+    if (to.name == 'end') return
+    else return { name: 'end' }
+  }
 
   if (!progressStore.progress.hasStarted && to.name != 'home') return { name: 'home' }
 })

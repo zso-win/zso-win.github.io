@@ -1,9 +1,10 @@
 <script setup lang="ts">
 
-import { computed, onMounted } from 'vue';
-import { NSpace, NImageGroup, NProgress, NButton } from 'naive-ui'
+import { computed, onMounted, watch } from 'vue';
+import { NSpace, NImageGroup, NProgress } from 'naive-ui'
 import { useAnswerStore } from '@/stores/answers';
 import { useProgressStore } from '@/stores/progress';
+import router from '@/router';
 
 const answrStr = useAnswerStore()
 const progressStore = useProgressStore()
@@ -13,7 +14,19 @@ const spProgress = computed(() => (answrStr.answers.get("sp1") ? 50 : 0) + (answ
 const fwProgress = computed(() => (answrStr.answers.get("fw1") ? 50 : 0) + (answrStr.answers.get("fw2") ? 50 : 0))
 const zsProgress = computed(() => (answrStr.answers.get("zs1") ? 50 : 0) + (answrStr.answers.get("zs2") ? 50 : 0))
 
-const finished = computed(() => progressStore.progress.hasFinished)
+const finished = computed(() =>
+    true // hack: for testing
+    /*rdProgress.value == 100 &&
+    spProgress.value == 100 &&
+    fwProgress.value == 100 &&
+    zsProgress.value == 100*/)
+
+watch(finished, async (newValue, oldValue) => {
+    if (newValue == true) {
+        progressStore.finish()
+        router.push({ name: 'end' })
+    }
+})
 
 onMounted(() => {
 
@@ -54,9 +67,5 @@ onMounted(() => {
                 </div>
             </n-space>
         </n-image-group>
-        <n-space></n-space>
-        <div v-if="finished">
-            <n-button>Preis abholen</n-button>
-        </div>
     </div>
 </template>

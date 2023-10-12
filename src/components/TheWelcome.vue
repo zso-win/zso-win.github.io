@@ -37,7 +37,7 @@ function reset(): void {
     <template #heading>So funktioniert's:</template>
 
     Scanne den QR Code mit der Frage und suche danach die Antwort auf dem Schadenplatz.
-    Scanne den gefundenen QR Code, um die Frage zu beantworten.
+    Wenn du etwas gefunden hast, scanne den QR Code, um die Frage zu beantworten.
     Hast du alle Fragen einer Partnerorganisation beantwortet, leuchtet das entsprechende Symbol auf.
     Wenn du alle Fragen beantwortet hast, kannst du am Hauptstand deinen Gewinn abholen!
   </WelcomeItem>

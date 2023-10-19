@@ -1,3 +1,7 @@
+export interface IIndexable {
+    [key: string]: any;
+}
+
 export const resources = {
     "fw1_q": {
         "img": "/assets/fire_fighters.jpg",
@@ -159,4 +163,4 @@ export const resources = {
         "img": "/assets/ZS_AW_Warteraum.png",
         "msg": "Der Warteraum ist nicht der gesuchte Ort. Der Warteraum liegt in der Verkehrsumleitungszone und muss mit der Rettungsachse abgestimmt sein. Die Einsatzleitung definiert den Warteraum. Hierhin werden Rettungsmittel geleitet, die nicht sofort für die Bewältigung des Ereignisses benötigt werden."
     }
-}
+} as IIndexable

@@ -4,16 +4,16 @@ export const resources = {
         "msg": "Mit welchem Gerät schneiden wir ein Fahrzeug (Auto, LKW) auf?"
     },
     "fw1_hydSchere": {
-        "img": "/assets/fire_fighters.jpg",
+        "img": "/assets/FW_Foto1-1.jpg",
         "msg": "Richtig, mit der hydraulischen Schere. Mit dieser Schere können wir einen Schneidedruck von bis zu 40 Tonnen erzeugen. In Kombination mit dem hydraulischen Spreitzer gibt es kein Fahrzeug, das wir so nicht innert kürzester Zeit öffnen können.",
         "rightAnswer": true
     },
     "fw1_rettungssaege": {
-        "img": "/assets/fire_fighters.jpg",
+        "img": "/assets/FW_Foto1-2.jpg",
         "msg": "Das ist eine Rettungssäge. Die Rettungssäge ist einer Kettensäge sehr ähnlich, hat aber eine spezielle Kette mit Diamant-Schneidezähnen. So können wir auch Glas, Blech und andere Materialien aufschneiden, ohne dass die Kette Stumpf wird."
     },
     "fw1_kettensaege": {
-        "img": "/assets/fire_fighters.jpg",
+        "img": "/assets/FW_Foto1-3.jpg",
         "msg": "Das ist eine Kettensäge. Eine Kettensäge kann nur Holz schneiden. Das macht sie sehr schnell und effizient. So ist auch der dickste Baumstamm in kurzer Zeit zerstückelt."
     },
     "fw2_q": {
@@ -21,16 +21,16 @@ export const resources = {
         "msg": "Welcher Gegenstand ist gemacht, um ihn über den Boden zu ziehen?"
     },
     "fw2_schleifkorbtrage": {
-        "img": "/assets/fire_fighters.jpg",
+        "img": "/assets/FW_Foto2-1.jpg",
         "msg": "Richtig, die Schleifkorbtrage. In dieser Wanne können wir Personen oder auch Material transportieren. Natürlich können wir die Schleifkorbtrage auch tragen oder sogar mit der Drehleiter oder einem Kran in die Luft heben. Für die Autodrehleiter (ADL) haben wir auch eine Halterung, um die Schleifkorbtrage am Korb zu fixieren. So können wir den Rettungsdienst unterstützen, um eine Person, die liegend befördert werden muss, auf den Boden zu transportieren. Zum Beispiel machen wir das, wenn die Person vom 2. Stock eines Hauses zum Rettungswagen muss.",
         "rightAnswer": true
     },
-    "fw2_ketten": {
-        "img": "/assets/fire_fighters.jpg",
-        "msg": "Diese Ketten sind nicht für den Personentransport. Wir montieren diese Ketten am Spreitzer, um etwas zusammen zu ziehen. Wie mit allem anderen Werkzeug sind wir dabei sehr vorsichtig, um nichts unnötig zu beschädigen."
+    "fw2_vorschlaghammer": {
+        "img": "/assets/FW_Foto2-2.jpg",
+        "msg": "Das ist ein Vorschlaghammer. Zwar ist er für grobe Arbeit gemacht, etwa um Pfähle einzuschlagen oder etwas zu zerbrechen.Aber diesen Tragen wir zum Einsatzort."
     },
     "fw2_elektrosatellit": {
-        "img": "/assets/fire_fighters.jpg",
+        "img": "/assets/FW_Foto2-3.jpg",
         "msg": "Das ist der Elektrosatellit. Am Elektrosatellit können wir viele verschiedene Geräte mit unterschiedlichen Steckertypen einstecken. Diesen Satelitten tragen wir natürlich und ziehen ihn nicht über den Boden."
     },
     "sp1_q":

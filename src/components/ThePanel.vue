@@ -11,7 +11,7 @@ const props = defineProps({
 <template>
     <div>
         <n-space justify="center">
-            <n-image width="350" :src="img" object-fit="scale-down" height="200" />
+            <n-image width="350" :src="img" object-fit="scale-down" height="200" class="canvas" />
         </n-space>
 
         <p>{{ msg }}</p>
@@ -19,4 +19,8 @@ const props = defineProps({
     </div>
 </template>
 
-<style></style>
+<style>
+.canvas {
+    background-color: white;
+}
+</style>

@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import router from '@/router';
-import { useAnswerStore } from '@/stores/answers';
-import { useProgressStore } from '@/stores/progress';
-import { useQuestionStore } from '@/stores/questions';
+import router from '@/router'
+import { useAnswerStore } from '@/stores/answers'
+import { useProgressStore } from '@/stores/progress'
+import { useQuestionStore } from '@/stores/questions'
 import { NImage, NButton, NModal } from 'naive-ui'
-import { ref } from 'vue';
+import { ref } from 'vue'
 
 const answers = useAnswerStore()
 const questions = useQuestionStore()
@@ -26,7 +26,6 @@ function onPositiveClick() {
 function onNegativeClick() {
   showModal.value = false
 }
-
 </script>
 
 <style>
@@ -47,6 +46,17 @@ main div {
       <n-button @click="showModal = true">Neu starten</n-button>
     </div>
   </main>
-  <n-modal :show="showModal" :mask-closable="false" :closable="false" :show-icon="false" preset="dialog" title="Schnitzeljagd neu starten"
-    content="Bist du sicher?" positive-text="Ja" negative-text="Nein" @positive-click="onPositiveClick" @negative-click="onNegativeClick" />
+  <n-modal
+    :show="showModal"
+    :mask-closable="false"
+    :closable="false"
+    :show-icon="false"
+    preset="dialog"
+    title="Schnitzeljagd neu starten"
+    content="Bist du sicher?"
+    positive-text="Ja"
+    negative-text="Nein"
+    @positive-click="onPositiveClick"
+    @negative-click="onNegativeClick"
+  />
 </template>

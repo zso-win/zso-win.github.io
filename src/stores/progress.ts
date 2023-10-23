@@ -22,5 +22,4 @@ export const useProgressStore = defineStore('progress', {
       this.progress.hasStarted = false
     }
   }
-}
-)
+})

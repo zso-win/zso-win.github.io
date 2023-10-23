@@ -23,7 +23,7 @@ const questions = useQuestionStore()
 const res = resources[key]
 
 if (!res) {
-  msg = "Oooops. Etwas ist schiefgelaufen. Versuche einen anderen QR Code."
+  msg = "Oooops. Etwas ist schiefgelaufen. Suche weiter und versuche einen anderen QR Code."
 }
 
 if (props.name == "q") {

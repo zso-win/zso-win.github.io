@@ -106,7 +106,7 @@ export const resources = {
         "msg": "In flüssiger Form. Wird ein Medikament in flüssiger Form direkt in die Blutbahn injiziert (gespritzt), tritt seine Wirkung sofort ein. Bei starken Schmerzen z. B., kann somit schnell eine Linderung erzielt werden.",
         "rightAnswer": true
     },
-    "rd3_tablette":
+    "rd2_tablette":
     {
         "img": "/assets/RD_Meds.jpg",
         "msg": "Als Tablette. Bei einem akuten Ereignis würde die Wirkung einer Tablette zu langsam einsetzen. Denn es dauert eine gewisse Zeit bis die Wirkstoffe in die Blutbahn gelangen und zu wirken beginnen. (Bei einer Tablette erfolgt dafür kein Stich in die Haut.)"
@@ -140,7 +140,7 @@ export const resources = {
     },
     "zs2_sanitaetshilfstelle":
     {
-        "img": "/assets/ZS_AW_Sanitätshilfestelle.png",
+        "img": "/assets/ZS_AW_Sanitaetshilfestelle.png",
         "msg": "Sanitätshilfsstelle ist nicht der gesuchte Ort bzw. Auftrag. Die Sanitätshilfsstelle liegt innerhalb der Sperrzone. Der Platzbedarf für eine Sanitätshilfsstelle kann bis zu 1500m2 (1/4 Fussballfeld) betragen. Sie ist ein Element des Rettungsdienstes."
     },
     "zs2_patientensammelstelle":

@@ -113,23 +113,23 @@ export const resources = {
     },
     "zs1_q":
     {
-        "img": "",
+        "img": "/assets/zs_kommunikation.png",
         "msg": "Wie kommunizieren wir im Einsatz auf Distanz?"
     },
     "zs1_funkgeraet":
     {
-        "img": "",
+        "img": "/assets/zs_funk.png",
         "msg": "Richtig, mit dem Funkgerät. Das Polycom-Funkgerät ist unser Kommunikationsmittel im Einsatz. Polycom heisst das flächendeckende Sicherheitsnetz «Funk» der Behörden und Organisationen für Rettung und Sicherheit (BORS). Es ermöglicht den Funkkontakt innerhalb sowie zwischen den verschiedenen Organisationen wie Grenzwacht, Polizei, Feuerwehr, Rettungsdienst, Zivilschutz und unterstützenden Verbänden der Armee.",
         "rightAnswer": true
     },
     "zs1_mobiltelefon":
     {
-        "img": "",
+        "img": "/assets/zs_mobiltelefon.png",
         "msg": "Das Mobiltelefon ist nur bedingt richtig. Wir tauschen gewisse Informationen über dieses Alltags-Kommunikationsmittel aus. Bei einem Strom- bzw. Stromnetzausfall oder bei einer Mobilfunküberlastung ist die Kommunikation über Mobiletelefone nicht zuverlässig. Such nach einem besser geeigneten Kommunikationsmittel."
     },
     "zs2_q":
     {
-        "img": "",
+        "img": "/assets/zs_auftrag.png",
         "msg": "Welchen Auftrag hat der Zivilschutz im Video erhalten? Die richtige Antwort findest du auf der Führungswand an unserem Einsatzleitfahrzeug."
     },
     "zs2_sammelstelle":

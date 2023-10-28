@@ -23,20 +23,20 @@ const res = resources[key]
 
 if (!res) {
   msg = 'Oooops. Etwas ist schiefgelaufen. Suche weiter und versuche einen anderen QR Code.'
-}
+} else {
+  if (props.name == 'q') {
+    questions.activateQuestion(questionKey)
+    msg = res.msg
+    img = res.img
+  }
 
-if (props.name == 'q') {
-  questions.activateQuestion(questionKey)
-  msg = res.msg
-  img = res.img
-}
+  if (questions.isActive(questionKey)) {
+    msg = res.msg
+    img = res.img
 
-if (res && questions.isActive(questionKey)) {
-  msg = res.msg
-  img = res.img
-
-  if (res['rightAnswer']) {
-    answers.rightAnswer(questionKey)
+    if (res['rightAnswer']) {
+      answers.rightAnswer(questionKey)
+    }
   }
 }
 </script>

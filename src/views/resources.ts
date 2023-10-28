@@ -76,12 +76,12 @@ export const resources = {
     msg: 'Welches Hilfsmittel wird eingesetzt, um Verunfallte mit Verdacht auf eine Wirbelsäulenverletzung auf der Trage im Rettungswagen zu transportieren?'
   },
   rd1_vakuummatratze: {
-    img: '/assets/RD_Vac.jpg',
+    img: '/assets/RD_AW-Vakuummatratze.jpg',
     msg: 'Richtig, die Vakuummatratze. Bei Verdacht auf eine Wirbelsäulenverletzung dürfen Verunfallte möglichst nicht bewegt werden. Für den Transport werden sie deshalb auf die Vakuummatratze gelegt, welche sich an den Körper anformen lässt. Das ermöglicht eine optimale Stabilisation der gesamten Wirbelsäule und ein angenehmes Liegen.',
     rightAnswer: true
   },
   rd1_schaufeltrage: {
-    img: '/assets/RD_Vac.jpg',
+    img: '/assets/RD_AW_Schaufeltrage.jpg',
     msg: 'Nein, das ist die Schaufeltrage. Die Schaufeltrage wird zum Aufnehmen («Aufschaufeln») von Verunfallten, die auf dem Boden liegen, eingesetzt. Vor dem Transport wird die verunfallte Person damit auf die Vakuummatratze gelegt und die Schaufeltrage wird entfernt.'
   },
   rd2_q: {
@@ -89,12 +89,12 @@ export const resources = {
     msg: 'In welcher Form werden die meisten Medikamente verabreicht?'
   },
   rd2_fluessig: {
-    img: '/assets/RD_Meds.jpg',
+    img: '/assets/RD_AW-fluesige Form.jpg',
     msg: 'In flüssiger Form. Wird ein Medikament in flüssiger Form direkt in die Blutbahn injiziert (gespritzt), tritt seine Wirkung sofort ein. Bei starken Schmerzen z. B., kann somit schnell eine Linderung erzielt werden.',
     rightAnswer: true
   },
   rd2_tablette: {
-    img: '/assets/RD_Meds.jpg',
+    img: '/assets/RD_AW_Tablette.jpg',
     msg: 'Als Tablette. Bei einem akuten Ereignis würde die Wirkung einer Tablette zu langsam einsetzen. Denn es dauert eine gewisse Zeit bis die Wirkstoffe in die Blutbahn gelangen und zu wirken beginnen. (Bei einer Tablette erfolgt dafür kein Stich in die Haut.)'
   },
   zs1_q: {
@@ -120,7 +120,7 @@ export const resources = {
     rightAnswer: true
   },
   zs2_sanitaetshilfstelle: {
-    img: '/assets/ZS_AW_Sanitaetshilfestelle.png',
+    img: '/assets/ZS_AW_Sanitaetshilfsstelle.png',
     msg: 'Sanitätshilfsstelle ist nicht der gesuchte Ort bzw. Auftrag. Die Sanitätshilfsstelle liegt innerhalb der Sperrzone. Der Platzbedarf für eine Sanitätshilfsstelle kann bis zu 1500m2 (1/4 Fussballfeld) betragen. Sie ist ein Element des Rettungsdienstes.'
   },
   zs2_patientensammelstelle: {

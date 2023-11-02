@@ -8,7 +8,7 @@ import router from '@/router'
 const answrStr = useAnswerStore()
 const progressStore = useProgressStore()
 
-let enableButton = ref(true)
+let enableButton = ref(false)
 
 const rdProgress = computed(() => (answrStr.answers.get('rd1') ? 50 : 0) + (answrStr.answers.get('rd2') ? 50 : 0))
 const spProgress = computed(() => (answrStr.answers.get('sp1') ? 50 : 0) + (answrStr.answers.get('sp2') ? 50 : 0))

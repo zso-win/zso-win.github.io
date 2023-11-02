@@ -62,7 +62,8 @@ nav a:first-of-type {
   border: 0;
 }
 
-@media (min-width: 1024px) {
+/* media query hack, to avoid line break*/
+@media (min-width: 3200px) {
   header {
     display: grid;
     place-items: center;

@@ -1,16 +1,22 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterView } from 'vue-router'
 import TheBanner from './components/TheBanner.vue'
+import { NImage, NImageGroup, NSpace } from 'naive-ui'
 </script>
 
 <template>
   <header>
-    <nav>
-      <RouterLink to="/">Home</RouterLink>
-    </nav>
+    <h2>SCHNITZELJAGD <br />BEVÖLKERUNGSSCHUTZ-ZONE</h2>
+    <n-image-group>
+      <n-space justify="space-around">
+        <n-image height="80" src="/assets/Stapo_Winterthur_Badge.png" object-fit="scale-down" />
+        <n-image height="80" src="/assets/SIW_Badge.png" object-fit="scale-down" />
+        <n-image height="80" src="/assets/Logo_RettungdienstWinterthur.png" object-fit="scale-down" />
+      </n-space>
+    </n-image-group>
+    <TheBanner class="tb-space"></TheBanner>
   </header>
 
-  <TheBanner class="tb-space"></TheBanner>
   <RouterView />
 </template>
 
@@ -18,6 +24,13 @@ import TheBanner from './components/TheBanner.vue'
 header {
   line-height: 1.5;
   max-height: 100vh;
+  background-color: moccasin;
+}
+
+h2 {
+  font: bold 20px 'Helvetica', 'Trebuchet MS', Arial, sans-serif;
+  margin-bottom: 10px;
+  padding: 5px;
 }
 
 nav {

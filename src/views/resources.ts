@@ -89,7 +89,7 @@ export const resources = {
     msg: 'In welcher Form werden die meisten Medikamente verabreicht?'
   },
   rd2_fluessig: {
-    img: '/assets/RD_AW-fluesige Form.jpg',
+    img: '/assets/RD_AW-fluessige Form.jpg',
     msg: 'In flüssiger Form. Wird ein Medikament in flüssiger Form direkt in die Blutbahn injiziert (gespritzt), tritt seine Wirkung sofort ein. Bei starken Schmerzen z. B., kann somit schnell eine Linderung erzielt werden.',
     rightAnswer: true
   },

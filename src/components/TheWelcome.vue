@@ -28,9 +28,10 @@ function reset(): void {
     <template #icon>
       <SupportIcon />
     </template>
-    <template #heading>Wintimäss Quiz</template>
+    <template #heading>Winti Mäss Quiz</template>
 
-    Schnitzeljagd durch den Schadenplatz von <i>Schutz und Intervention</i> Winterthur
+    Die virtuelle Schnitzeljagd durch den Schadenplatz in der Bevölkerungsschutz-Zone der Partnerorganisationen
+    <i>Rettungsdienst, Stadtpolizei und Schutz & Intervention</i> Winterthur
   </WelcomeItem>
 
   <WelcomeItem>
@@ -39,9 +40,10 @@ function reset(): void {
     </template>
     <template #heading>So funktioniert's:</template>
 
-    Scanne den QR Code mit der Frage und suche danach die Antwort auf dem Schadenplatz. Wenn du etwas gefunden hast,
-    scanne den QR Code, um die Frage zu beantworten. Hast du alle Fragen einer Partnerorganisation beantwortet, leuchtet
-    das entsprechende Symbol auf. Wenn du alle Fragen beantwortet hast, kannst du am Hauptstand deinen Gewinn abholen!
+    Scanne den QR-Code mit der Frage und suche danach die richtige Antwort auf dem Schadenplatz. Wenn du etwas gefunden
+    hast, scanne diesen QR-Code, um die Frage zu beantworten. Hast du alle Fragen einer Partnerorganisation beantwortet,
+    leuchtet das entsprechende Symbol auf. Wenn du alle Fragen beantwortet hast, kannst du bei einer der
+    Partnerorganisationen deinen Gewinn abholen
   </WelcomeItem>
 
   <WelcomeItem v-if="!hasStarted">
@@ -59,7 +61,8 @@ function reset(): void {
     </template>
     <template #heading>Los geht's</template>
 
-    Scanne die erste Frage und suche nach den Antworten. Die Reihenfolge spielt dabei keine Rolle. Viel Spass!
+    Scanne die erste Frage und suche nach der Antwort, dann geht es weiter mit der zweiten Frage, der dritten usw…. Die
+    Reihenfolge spielt dabei keine Rolle. Viel Spass!
   </WelcomeItem>
 
   <n-button @click="progress.start">Schnitzeljagd starten!</n-button>

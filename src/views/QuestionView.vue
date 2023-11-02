@@ -10,8 +10,10 @@ const props = defineProps({
   name: String
 })
 
-let msg = 'Dieser QR Code is für eine andere Frage. Suche weiter.'
+let msg = 'Dieser QR-Code is für eine andere Frage. Suche weiter.'
 let img = '/assets/ambulance.jpg'
+let answerCheck: boolean | undefined
+let isZS = props.org == 'zs'
 
 const questionKey = `${props.org}${props.id}`
 const key = `${questionKey}_${props.name}`
@@ -22,27 +24,30 @@ const questions = useQuestionStore()
 const res = resources[key]
 
 if (!res) {
-  msg = 'Oooops. Etwas ist schiefgelaufen. Suche weiter und versuche einen anderen QR Code.'
+  msg = 'Oooops. Etwas ist schiefgelaufen. Suche weiter und versuche einen anderen QR-Code.'
 } else {
+  if (questions.isActive(questionKey)) {
+    msg = res.msg
+    img = res.img
+    answerCheck = false
+
+    if (res['rightAnswer']) {
+      answers.rightAnswer(questionKey)
+      answerCheck = true
+    }
+  }
+
   if (props.name == 'q') {
     questions.activateQuestion(questionKey)
     msg = res.msg
     img = res.img
-  }
-
-  if (questions.isActive(questionKey)) {
-    msg = res.msg
-    img = res.img
-
-    if (res['rightAnswer']) {
-      answers.rightAnswer(questionKey)
-    }
+    answerCheck = undefined
   }
 }
 </script>
 
 <template>
   <main>
-    <ThePanel :msg="msg" :img="img" />
+    <ThePanel :msg="msg" :img="img" :answerCheck="answerCheck" :isZS="isZS" />
   </main>
 </template>

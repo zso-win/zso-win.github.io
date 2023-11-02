@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { computed, onMounted, watch } from 'vue'
-import { NSpace, NImageGroup, NProgress } from 'naive-ui'
+import { computed, onMounted, watch, ref } from 'vue'
+import { NSpace, NImageGroup, NProgress, NButton } from 'naive-ui'
 import { useAnswerStore } from '@/stores/answers'
 import { useProgressStore } from '@/stores/progress'
 import router from '@/router'
@@ -8,25 +8,28 @@ import router from '@/router'
 const answrStr = useAnswerStore()
 const progressStore = useProgressStore()
 
+let enableButton = ref(true)
+
 const rdProgress = computed(() => (answrStr.answers.get('rd1') ? 50 : 0) + (answrStr.answers.get('rd2') ? 50 : 0))
 const spProgress = computed(() => (answrStr.answers.get('sp1') ? 50 : 0) + (answrStr.answers.get('sp2') ? 50 : 0))
 const fwProgress = computed(() => (answrStr.answers.get('fw1') ? 50 : 0) + (answrStr.answers.get('fw2') ? 50 : 0))
 const zsProgress = computed(() => (answrStr.answers.get('zs1') ? 50 : 0) + (answrStr.answers.get('zs2') ? 50 : 0))
 
 const finished = computed(
-  () => true // hack: for testing
-  /*rdProgress.value == 100 &&
-    spProgress.value == 100 &&
-    fwProgress.value == 100 &&
-    zsProgress.value == 100*/
+  () => rdProgress.value == 100 && spProgress.value == 100 && fwProgress.value == 100 && zsProgress.value == 100
 )
 
 watch(finished, async (newValue, oldValue) => {
   if (newValue == true) {
     progressStore.finish()
-    router.push({ name: 'end' })
+    enableButton.value = true
   }
 })
+
+function getPrize(): void {
+  enableButton.value = false
+  router.push({ name: 'end' })
+}
 
 onMounted(() => {})
 </script>
@@ -64,5 +67,10 @@ onMounted(() => {})
         </div>
       </n-space>
     </n-image-group>
+    <n-space justify="center">
+      <n-button v-if="enableButton" strong primary round type="warning" @click="getPrize"
+        >Schnitzeljagd beenden und Preis abholen</n-button
+      >
+    </n-space>
   </div>
 </template>

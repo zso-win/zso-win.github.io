@@ -39,9 +39,9 @@ main div {
 <template>
   <main>
     <p>Gratulation! Du kannst dir deinen Preis abholen.</p>
-    <n-image width="350" src="assets/Logo_RettungdienstWinterthur.png" object-fit="scale-down" height="200" />
+    <n-image width="350" src="/assets/Logo_RettungdienstWinterthur.png" object-fit="scale-down" height="200" />
     <n-image width="350" src="/assets/SIW_Badge.png" object-fit="scale-down" height="200" />
-    <n-image width="350" src="assets/Stapo_Winterthur_Badge.png" object-fit="scale-down" height="200" />
+    <n-image width="350" src="/assets/Stapo_Winterthur_Badge.png" object-fit="scale-down" height="200" />
     <div>
       <n-button @click="showModal = true">Neu starten</n-button>
     </div>
@@ -58,5 +58,7 @@ main div {
     negative-text="Nein"
     @positive-click="onPositiveClick"
     @negative-click="onNegativeClick"
+    :positive-button-props="{ type: 'error' }"
+    :negative-button-props="{ color: 'rgb(51, 54, 57)' }"
   />
 </template>

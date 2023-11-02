@@ -1,17 +1,25 @@
 <script setup lang="ts">
-import { NSpace, NImage } from 'naive-ui'
+import { NSpace, NImage, NResult } from 'naive-ui'
 
 const props = defineProps({
   msg: String,
-  img: String
+  img: String,
+  answerCheck: { type: Boolean, required: false },
+  isZS: Boolean
 })
+
+let isCorrect = props.answerCheck == true
+let isWrong = props.answerCheck == false
 </script>
 
 <template>
   <div>
     <n-space justify="center">
-      <n-image width="350" :src="img" object-fit="scale-down" height="200" class="canvas" />
+      <n-image width="350" :src="img" object-fit="scale-down" height="200" :class="{ canvas: isZS }" />
     </n-space>
+
+    <n-result v-if="isCorrect" status="success" title="Richtig!" size="small"></n-result>
+    <n-result v-if="isWrong" status="error" title="Leider falsch." size="small" description="Suche weiter!"></n-result>
 
     <p>{{ msg }}</p>
   </div>

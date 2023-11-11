@@ -38,7 +38,7 @@ export const resources = {
     msg: 'Das ist der Elektrosatellit. Am Elektrosatellit können wir viele verschiedene Geräte mit unterschiedlichen Steckertypen einstecken. Diesen Satelitten tragen wir natürlich und ziehen ihn nicht über den Boden.'
   },
   sp1_q: {
-    img: '/assets/Stapo_Frontblitzer.png',
+    img: '/assets/Stapo_Einsatzwagen.png',
     msg: 'Wo befinden sich die Frontblitzer am Streifenwagen?'
   },
   sp1_frontblitzer: {
@@ -47,11 +47,11 @@ export const resources = {
     rightAnswer: true
   },
   sp1_scheinwerfer: {
-    img: '/assets/Stapo_Frontblitzer.png',
+    img: '/assets/Stapo_scheinwerfer.png',
     msg: 'Nein, das sind die Scheinwerfer. Diese brauchen wir für eine bessere Sicht in der Nacht.'
   },
   sp1_zusatzblinker: {
-    img: '/assets/Stapo_Frontblitzer.png',
+    img: '/assets/Stapo_zusatzblinker.png',
     msg: 'Nein, das sind Zusatzblinker. Damit werden unsere Fahrzeuge, wenn sie beispielsweise bei schlechter Sicht auf der Strasse abgestellt sind, besser erkannt.'
   },
   sp2_q: {

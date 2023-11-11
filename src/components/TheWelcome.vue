@@ -65,7 +65,7 @@ function reset(): void {
     Reihenfolge spielt dabei keine Rolle. Viel Spass!
   </WelcomeItem>
 
-  <n-button @click="progress.start">Schnitzeljagd starten!</n-button>
+  <!-- <n-button @click="progress.start">Schnitzeljagd starten!</n-button>
   <n-button @click="progress.finish">Schnitzeljagd beenden!</n-button>
-  <n-button block @click="reset">Reset</n-button>
+  <n-button block @click="reset">Reset</n-button> -->
 </template>

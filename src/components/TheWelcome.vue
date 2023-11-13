@@ -31,7 +31,7 @@ function reset(): void {
     <template #heading>Winti Mäss Quiz</template>
 
     Die virtuelle Schnitzeljagd durch den Schadenplatz in der Bevölkerungsschutz-Zone der Partnerorganisationen
-    <i>Rettungsdienst, Stadtpolizei und Schutz & Intervention</i> Winterthur
+    <i>Rettungsdienst, Stadtpolizei und Schutz & Intervention</i> Winterthur.
   </WelcomeItem>
 
   <WelcomeItem>
@@ -43,7 +43,7 @@ function reset(): void {
     Scanne den QR-Code mit der Frage und suche danach die richtige Antwort auf dem Schadenplatz. Wenn du etwas gefunden
     hast, scanne diesen QR-Code, um die Frage zu beantworten. Hast du alle Fragen einer Partnerorganisation beantwortet,
     leuchtet das entsprechende Symbol auf. Wenn du alle Fragen beantwortet hast, kannst du bei einer der
-    Partnerorganisationen deinen Gewinn abholen
+    Partnerorganisationen deinen Gewinn abholen.
   </WelcomeItem>
 
   <WelcomeItem v-if="!hasStarted">
@@ -64,8 +64,4 @@ function reset(): void {
     Scanne die erste Frage und suche nach der Antwort, dann geht es weiter mit der zweiten Frage, der dritten usw…. Die
     Reihenfolge spielt dabei keine Rolle. Viel Spass!
   </WelcomeItem>
-
-  <!-- <n-button @click="progress.start">Schnitzeljagd starten!</n-button>
-  <n-button @click="progress.finish">Schnitzeljagd beenden!</n-button>
-  <n-button block @click="reset">Reset</n-button> -->
 </template>

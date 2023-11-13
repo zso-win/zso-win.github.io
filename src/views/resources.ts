@@ -4,12 +4,12 @@ export interface IIndexable {
 
 export const resources = {
   fw1_q: {
-    img: '/assets/fire_fighters.jpg',
+    img: '/assets/FW_Foto1-q.jpg',
     msg: 'Mit welchem Gerät schneiden wir ein Fahrzeug (Auto, LKW) auf?'
   },
   fw1_hydSchere: {
     img: '/assets/FW_Foto1-1.jpg',
-    msg: 'Richtig, mit der hydraulischen Schere. Mit dieser Schere können wir einen Schneidedruck von bis zu 40 Tonnen erzeugen. In Kombination mit dem hydraulischen Spreitzer gibt es kein Fahrzeug, das wir so nicht innert kürzester Zeit öffnen können.',
+    msg: 'Mit der hydraulischen Schere. Mit dieser Schere können wir einen Schneidedruck von bis zu 40 Tonnen erzeugen. In Kombination mit dem hydraulischen Spreitzer gibt es kein Fahrzeug, das wir so nicht innert kürzester Zeit öffnen können.',
     rightAnswer: true
   },
   fw1_rettungssaege: {
@@ -21,12 +21,12 @@ export const resources = {
     msg: 'Das ist eine Kettensäge. Eine Kettensäge kann nur Holz schneiden. Das macht sie sehr schnell und effizient. So ist auch der dickste Baumstamm in kurzer Zeit zerstückelt.'
   },
   fw2_q: {
-    img: '/assets/fire_fighters.jpg',
+    img: '/assets/FW_Foto2-q.jpg',
     msg: 'Welcher Gegenstand ist gemacht, um ihn über den Boden zu ziehen?'
   },
   fw2_schleifkorbtrage: {
     img: '/assets/FW_Foto2-1.jpg',
-    msg: 'Richtig, die Schleifkorbtrage. In dieser Wanne können wir Personen oder auch Material transportieren. Natürlich können wir die Schleifkorbtrage auch tragen oder sogar mit der Drehleiter oder einem Kran in die Luft heben. Für die Autodrehleiter (ADL) haben wir auch eine Halterung, um die Schleifkorbtrage am Korb zu fixieren. So können wir den Rettungsdienst unterstützen, um eine Person, die liegend befördert werden muss, auf den Boden zu transportieren. Zum Beispiel machen wir das, wenn die Person vom 2. Stock eines Hauses zum Rettungswagen muss.',
+    msg: 'Die Schleifkorbtrage. In dieser Wanne können wir Personen oder auch Material transportieren. Natürlich können wir die Schleifkorbtrage auch tragen oder sogar mit der Drehleiter oder einem Kran in die Luft heben. Für die Autodrehleiter (ADL) haben wir auch eine Halterung, um die Schleifkorbtrage am Korb zu fixieren. So können wir den Rettungsdienst unterstützen, um eine Person, die liegend befördert werden muss, auf den Boden zu transportieren. Zum Beispiel machen wir das, wenn die Person vom 2. Stock eines Hauses zum Rettungswagen muss.',
     rightAnswer: true
   },
   fw2_vorschlaghammer: {
@@ -43,16 +43,16 @@ export const resources = {
   },
   sp1_frontblitzer: {
     img: '/assets/Stapo_Frontblitzer.png',
-    msg: 'Richtig, die Frontblitzer sind bei diesem Fahrzeugtyp hinter dem Kühlergrill montiert. So werden wir bei Blaulicht-Fahrten noch besser gesehen.',
+    msg: 'Die Frontblitzer sind bei diesem Fahrzeugtyp hinter dem Kühlergrill montiert. So werden wir bei Blaulicht-Fahrten noch besser gesehen.',
     rightAnswer: true
   },
   sp1_scheinwerfer: {
     img: '/assets/Stapo_scheinwerfer.png',
-    msg: 'Nein, das sind die Scheinwerfer. Diese brauchen wir für eine bessere Sicht in der Nacht.'
+    msg: 'Das sind die Scheinwerfer. Diese brauchen wir für eine bessere Sicht in der Nacht.'
   },
   sp1_zusatzblinker: {
     img: '/assets/Stapo_zusatzblinker.png',
-    msg: 'Nein, das sind Zusatzblinker. Damit werden unsere Fahrzeuge, wenn sie beispielsweise bei schlechter Sicht auf der Strasse abgestellt sind, besser erkannt.'
+    msg: 'Das sind Zusatzblinker. Damit werden unsere Fahrzeuge, wenn sie beispielsweise bei schlechter Sicht auf der Strasse abgestellt sind, besser erkannt.'
   },
   sp2_q: {
     img: '/assets/Stapo_Funkgerät.png',
@@ -60,16 +60,16 @@ export const resources = {
   },
   sp2_funkgeraet: {
     img: '/assets/Stapo_Funkgerät.png',
-    msg: 'Richtig, mit dem Funkgerät. Einerseits kann die Patrouille mit dem Funkgerät aus dem Fahrzeug heraus mit der Einsatzzentrale sowie anderseits mit anderen Polizistinnen und Polizisten kommunizieren.',
+    msg: 'Mit dem Funkgerät. Einerseits kann die Patrouille mit dem Funkgerät aus dem Fahrzeug heraus mit der Einsatzzentrale sowie anderseits mit anderen Polizistinnen und Polizisten kommunizieren.',
     rightAnswer: true
   },
   sp2_radio: {
     img: '/assets/Stapo_Funkgerät.png',
-    msg: 'Nein, das ist das Radio. Auch wir Polizistinnen und Polizisten hören im Auto gerne Musik oder die Nachrichten.'
+    msg: 'Das ist das Radio. Auch wir Polizistinnen und Polizisten hören im Auto gerne Musik oder die Nachrichten.'
   },
   sp2_blaulicht: {
     img: '/assets/Stapo_Funkgerät.png',
-    msg: 'Leider nicht. Mit diesem Gerät stellen wir die Anzeige sowie das Blaulicht und die Sirene auf dem Dachbalken ein.'
+    msg: 'Mit diesem Gerät stellen wir die Anzeige sowie das Blaulicht und die Sirene auf dem Dachbalken ein.'
   },
   rd1_q: {
     img: '/assets/RD_Vac.jpg',
@@ -77,12 +77,12 @@ export const resources = {
   },
   rd1_vakuummatratze: {
     img: '/assets/RD_AW-Vakuummatratze.jpg',
-    msg: 'Richtig, die Vakuummatratze. Bei Verdacht auf eine Wirbelsäulenverletzung dürfen Verunfallte möglichst nicht bewegt werden. Für den Transport werden sie deshalb auf die Vakuummatratze gelegt, welche sich an den Körper anformen lässt. Das ermöglicht eine optimale Stabilisation der gesamten Wirbelsäule und ein angenehmes Liegen.',
+    msg: 'Die Vakuummatratze. Bei Verdacht auf eine Wirbelsäulenverletzung dürfen Verunfallte möglichst nicht bewegt werden. Für den Transport werden sie deshalb auf die Vakuummatratze gelegt, welche sich an den Körper anformen lässt. Das ermöglicht eine optimale Stabilisation der gesamten Wirbelsäule und ein angenehmes Liegen.',
     rightAnswer: true
   },
   rd1_schaufeltrage: {
     img: '/assets/RD_AW_Schaufeltrage.jpg',
-    msg: 'Nein, das ist die Schaufeltrage. Die Schaufeltrage wird zum Aufnehmen («Aufschaufeln») von Verunfallten, die auf dem Boden liegen, eingesetzt. Vor dem Transport wird die verunfallte Person damit auf die Vakuummatratze gelegt und die Schaufeltrage wird entfernt.'
+    msg: 'Das ist die Schaufeltrage. Die Schaufeltrage wird zum Aufnehmen («Aufschaufeln») von Verunfallten, die auf dem Boden liegen, eingesetzt. Vor dem Transport wird die verunfallte Person damit auf die Vakuummatratze gelegt und die Schaufeltrage wird entfernt.'
   },
   rd2_q: {
     img: '/assets/RD_Meds.jpg',
@@ -103,7 +103,7 @@ export const resources = {
   },
   zs1_funkgeraet: {
     img: '/assets/zs_funk.png',
-    msg: 'Richtig, mit dem Funkgerät. Das Polycom-Funkgerät ist unser Kommunikationsmittel im Einsatz. Polycom heisst das flächendeckende Sicherheitsnetz «Funk» der Behörden und Organisationen für Rettung und Sicherheit (BORS). Es ermöglicht den Funkkontakt innerhalb sowie zwischen den verschiedenen Organisationen wie Grenzwacht, Polizei, Feuerwehr, Rettungsdienst, Zivilschutz und unterstützenden Verbänden der Armee.',
+    msg: 'Mit dem Funkgerät. Das Polycom-Funkgerät ist unser Kommunikationsmittel im Einsatz. Polycom heisst das flächendeckende Sicherheitsnetz «Funk» der Behörden und Organisationen für Rettung und Sicherheit (BORS). Es ermöglicht den Funkkontakt innerhalb sowie zwischen den verschiedenen Organisationen wie Grenzwacht, Polizei, Feuerwehr, Rettungsdienst, Zivilschutz und unterstützenden Verbänden der Armee.',
     rightAnswer: true
   },
   zs1_mobiltelefon: {
@@ -116,7 +116,7 @@ export const resources = {
   },
   zs2_sammelstelle: {
     img: '/assets/ZS_AW_Sammelstelle.png',
-    msg: 'Richtig, im Video betreuen wir die Sammelstelle der Unverletzten. Wir kümmern uns an der Sammelstelle, die wir zuvor aufgebaut haben, um die Unverletzten. Bei der Aufnahme der Personalien unterstützt uns die Stadtpolizei.',
+    msg: 'Im Video betreuen wir die Sammelstelle der Unverletzten. Wir kümmern uns an der Sammelstelle, die wir zuvor aufgebaut haben, um die Unverletzten. Bei der Aufnahme der Personalien unterstützt uns die Stadtpolizei.',
     rightAnswer: true
   },
   zs2_sanitaetshilfstelle: {

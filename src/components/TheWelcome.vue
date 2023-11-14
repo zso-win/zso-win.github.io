@@ -42,8 +42,8 @@ function reset(): void {
 
     Scanne den QR-Code mit der Frage und suche danach die richtige Antwort auf dem Schadenplatz. Wenn du etwas gefunden
     hast, scanne diesen QR-Code, um die Frage zu beantworten. Hast du alle Fragen einer Partnerorganisation beantwortet,
-    leuchtet das entsprechende Symbol auf. Wenn du alle Fragen beantwortet hast, kannst du bei einer der
-    Partnerorganisationen deinen Gewinn abholen.
+    zeigt der Kontrollbalken 100%. Wenn du alle Fragen beantwortet hast, kannst du bei einer der Partnerorganisationen
+    deinen Gewinn abholen.
   </WelcomeItem>
 
   <WelcomeItem v-if="!hasStarted">

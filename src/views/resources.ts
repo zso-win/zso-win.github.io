@@ -14,7 +14,7 @@ export const resources = {
   },
   fw1_rettungssaege: {
     img: '/assets/FW_Foto1-2.jpg',
-    msg: 'Das ist eine Rettungssäge. Die Rettungssäge ist einer Kettensäge sehr ähnlich, hat aber eine spezielle Kette mit Diamant-Schneidezähnen. So können wir auch Glas, Blech und andere Materialien aufschneiden, ohne dass die Kette Stumpf wird.'
+    msg: 'Das ist eine Rettungssäge. Die Rettungssäge ist einer Kettensäge sehr ähnlich, hat aber eine spezielle Kette mit Diamant-Schneidezähnen. So können wir auch Glas, Blech und andere Materialien aufschneiden, ohne dass die Kette stumpf wird.'
   },
   fw1_kettensaege: {
     img: '/assets/FW_Foto1-3.jpg',
@@ -26,16 +26,16 @@ export const resources = {
   },
   fw2_schleifkorbtrage: {
     img: '/assets/FW_Foto2-1.jpg',
-    msg: 'Die Schleifkorbtrage. In dieser Wanne können wir Personen oder auch Material transportieren. Natürlich können wir die Schleifkorbtrage auch tragen oder sogar mit der Drehleiter oder einem Kran in die Luft heben. Für die Autodrehleiter (ADL) haben wir auch eine Halterung, um die Schleifkorbtrage am Korb zu fixieren. So können wir den Rettungsdienst unterstützen, um eine Person, die liegend befördert werden muss, auf den Boden zu transportieren. Zum Beispiel machen wir das, wenn die Person vom 2. Stock eines Hauses zum Rettungswagen muss.',
+    msg: 'Die Schleifkorbtrage. In dieser Wanne können wir Personen oder auch Material transportieren. Natürlich können wir die Schleifkorbtrage auch tragen oder sogar mit der Drehleiter oder einem Kran in die Luft heben. Für die Autodrehleiter (ADL) haben wir auch eine Halterung, um die Schleifkorbtrage am Korb zu fixieren. So können wir den Rettungsdienst unterstützen, um eine Person, die liegend befördert werden muss, zu transportieren. Zum Beispiel machen wir das, wenn die Person vom 2. Stock eines Hauses zum Rettungswagen muss.',
     rightAnswer: true
   },
   fw2_vorschlaghammer: {
     img: '/assets/FW_Foto2-2.jpg',
-    msg: 'Das ist ein Vorschlaghammer. Zwar ist er für grobe Arbeit gemacht, etwa um Pfähle einzuschlagen oder etwas zu zerbrechen.Aber diesen Tragen wir zum Einsatzort.'
+    msg: 'Das ist ein Vorschlaghammer. Zwar ist er für grobe Arbeit gemacht, etwa um Pfähle einzuschlagen oder etwas zu zerbrechen. Aber diesen Tragen wir zum Einsatzort.'
   },
   fw2_elektrosatellit: {
     img: '/assets/FW_Foto2-3.jpg',
-    msg: 'Das ist der Elektrosatellit. Am Elektrosatellit können wir viele verschiedene Geräte mit unterschiedlichen Steckertypen einstecken. Diesen Satelitten tragen wir natürlich und ziehen ihn nicht über den Boden.'
+    msg: 'Das ist der Elektrosatellit. Am Elektrosatellit können wir viele verschiedene Geräte mit unterschiedlichen Steckertypen einstecken. Diesen Satelliten tragen wir natürlich und ziehen ihn nicht über den Boden.'
   },
   sp1_q: {
     img: '/assets/Stapo_Einsatzwagen.png',
@@ -90,12 +90,12 @@ export const resources = {
   },
   rd2_fluessig: {
     img: '/assets/RD_AW-fluessige Form.jpg',
-    msg: 'In flüssiger Form. Wird ein Medikament in flüssiger Form direkt in die Blutbahn injiziert (gespritzt), tritt seine Wirkung sofort ein. Bei starken Schmerzen z. B., kann somit schnell eine Linderung erzielt werden.',
+    msg: 'Wird ein Medikament in flüssiger Form direkt in die Blutbahn injiziert (gespritzt), tritt seine Wirkung sofort ein. Bei starken Schmerzen z. B. kann somit schnell eine Linderung erzielt werden.',
     rightAnswer: true
   },
   rd2_tablette: {
     img: '/assets/RD_AW_Tablette.jpg',
-    msg: 'Als Tablette. Bei einem akuten Ereignis würde die Wirkung einer Tablette zu langsam einsetzen. Denn es dauert eine gewisse Zeit bis die Wirkstoffe in die Blutbahn gelangen und zu wirken beginnen. (Bei einer Tablette erfolgt dafür kein Stich in die Haut.)'
+    msg: 'Bei einem akuten Ereignis würde die Wirkung einer Tablette zu langsam einsetzen. Denn es dauert eine gewisse Zeit, bis die Wirkstoffe in die Blutbahn gelangen und zu wirken beginnen. Bei einer Tablette erfolgt dafür kein Stich in die Haut.'
   },
   zs1_q: {
     img: '/assets/zs_kommunikation.png',
@@ -133,7 +133,7 @@ export const resources = {
   },
   zs2_einsatzleitung: {
     img: '/assets/ZS_AW_Einsatzleitung.png',
-    msg: 'Der Standort der Einsatzleitung ist nicht der gesuchte Auftrag bzw. Ort. Hier befindet sich Standort der Einsatzleitung bestehend aus Polizei, Feuerwehr, Rettungsdienst und Zivilschutz.Dieser Absprachepunkt darf nicht im Patientenfluss oder zu nahe an der Sammelstelle liegen.Überdies darf er für Medien nicht einsehbar sein und muss kontrolliert werden.'
+    msg: 'Der Standort der Einsatzleitung ist nicht der gesuchte Auftrag bzw. Ort. Hier befindet sich Standort der Einsatzleitung bestehend aus Polizei, Feuerwehr, Rettungsdienst und Zivilschutz. Dieser Absprachepunkt darf nicht im Patientenfluss oder zu nahe an der Sammelstelle liegen. Überdies darf er für Medien nicht einsehbar sein und muss kontrolliert werden.'
   },
   zs2_warteraum: {
     img: '/assets/ZS_AW_Warteraum.png',

@@ -39,6 +39,22 @@ onMounted(() => {})
   background-color: moccasin;
   padding: 10px 0px 5px 0px;
 }
+
+img {
+  margin-left: 4px;
+}
+
+button {
+  margin: 10px;
+}
+
+.highlight {
+  background-image: linear-gradient(orange, moccasin, orange);
+}
+
+.bar {
+  width: 68px;
+}
 </style>
 
 <template>
@@ -47,30 +63,36 @@ onMounted(() => {})
       <n-space justify="space-around">
         <div>
           <img width="60" src="@/assets/adp.png" />
-          <n-progress type="line" status="warning" :percentage="spProgress" indicator-placement="inside" />
+          <div class="bar">
+            <n-progress type="line" status="warning" :percentage="spProgress" indicator-placement="inside" />
+          </div>
           <p>Polizei</p>
         </div>
         <div>
           <img width="60" src="@/assets/adfw.png" />
-          <n-progress type="line" status="warning" :percentage="fwProgress" indicator-placement="inside" />
+          <div class="bar">
+            <n-progress type="line" status="warning" :percentage="fwProgress" indicator-placement="inside" />
+          </div>
           <p>Feuerwehr</p>
         </div>
         <div>
           <img width="60" src="@/assets/ads.png" />
-          <n-progress type="line" status="warning" :percentage="rdProgress" indicator-placement="inside" />
+          <div class="bar">
+            <n-progress type="line" status="warning" :percentage="rdProgress" indicator-placement="inside" />
+          </div>
           <p>Rettungs-<br />dienst</p>
         </div>
         <div>
           <img width="60" src="@/assets/adzs.png" />
-          <n-progress type="line" status="warning" :percentage="zsProgress" indicator-placement="inside" />
+          <div class="bar">
+            <n-progress type="line" status="warning" :percentage="zsProgress" indicator-placement="inside" />
+          </div>
           <p>Zivilschutz</p>
         </div>
       </n-space>
     </n-image-group>
-    <n-space justify="center">
-      <n-button v-if="enableButton" strong primary round type="warning" @click="getPrize"
-        >Schnitzeljagd beenden und Preis abholen</n-button
-      >
+    <n-space v-if="enableButton" justify="center" class="highlight">
+      <n-button strong primary round type="warning" @click="getPrize">Schnitzeljagd beenden und Preis abholen</n-button>
     </n-space>
   </div>
 </template>

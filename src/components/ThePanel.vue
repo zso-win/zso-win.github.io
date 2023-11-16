@@ -21,13 +21,17 @@ let isWrong = props.answerCheck == false
     <n-result v-if="isCorrect" status="success" title="Richtig!" size="small"></n-result>
     <n-result v-if="isWrong" status="error" title="Leider falsch." size="small"></n-result>
 
-    <p>{{ msg }}</p>
-    <p v-if="isWrong">Versuch es weiter!</p>
+    <p class="text">{{ msg }}</p>
+    <p class="text" v-if="isWrong">Versuch es weiter!</p>
   </div>
 </template>
 
 <style>
 .canvas {
   background-color: white;
+}
+
+.text {
+  font-size: medium;
 }
 </style>

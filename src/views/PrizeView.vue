@@ -39,9 +39,21 @@ main div {
 <template>
   <main>
     <p>Gratulation! Du kannst dir deinen Preis bei einer der vier Partnerorganisationen abholen.</p>
-    <n-image width="350" src="/assets/Logo_RettungdienstWinterthur.png" object-fit="scale-down" height="200" />
-    <n-image width="350" src="/assets/SIW_Badge.png" object-fit="scale-down" height="200" />
-    <n-image width="350" src="/assets/Stapo_Winterthur_Badge.png" object-fit="scale-down" height="200" />
+    <n-image
+      width="350"
+      preview-disabled
+      src="/assets/Logo_RettungdienstWinterthur.png"
+      object-fit="scale-down"
+      height="200"
+    />
+    <n-image width="350" preview-disabled src="/assets/SIW_Badge.png" object-fit="scale-down" height="200" />
+    <n-image
+      width="350"
+      preview-disabled
+      src="/assets/Stapo_Winterthur_Badge.png"
+      object-fit="scale-down"
+      height="200"
+    />
     <div>
       <n-button @click="showModal = true">Neu starten</n-button>
     </div>

@@ -31,7 +31,7 @@ function getPrize(): void {
   router.push({ name: 'end' })
 }
 
-onMounted(() => {})
+onMounted(() => { })
 </script>
 
 <style scoped>
@@ -53,7 +53,11 @@ button {
 }
 
 .bar {
-  width: 68px;
+  width: 66px;
+}
+
+.icon {
+  width: 58px;
 }
 </style>
 
@@ -62,28 +66,28 @@ button {
     <n-image-group>
       <n-space justify="space-around">
         <div>
-          <img width="60" src="@/assets/adp.png" />
+          <img class="icon" src="@/assets/adp.png" />
           <div class="bar">
             <n-progress type="line" status="warning" :percentage="spProgress" indicator-placement="inside" />
           </div>
           <p>Polizei</p>
         </div>
         <div>
-          <img width="60" src="@/assets/adfw.png" />
+          <img class="icon" src="@/assets/adfw.png" />
           <div class="bar">
             <n-progress type="line" status="warning" :percentage="fwProgress" indicator-placement="inside" />
           </div>
           <p>Feuerwehr</p>
         </div>
         <div>
-          <img width="60" src="@/assets/ads.png" />
+          <img class="icon" src="@/assets/ads.png" />
           <div class="bar">
             <n-progress type="line" status="warning" :percentage="rdProgress" indicator-placement="inside" />
           </div>
           <p>Rettungs-<br />dienst</p>
         </div>
         <div>
-          <img width="60" src="@/assets/adzs.png" />
+          <img class="icon" src="@/assets/adzs.png" />
           <div class="bar">
             <n-progress type="line" status="warning" :percentage="zsProgress" indicator-placement="inside" />
           </div>

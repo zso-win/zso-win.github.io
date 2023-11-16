@@ -32,6 +32,6 @@ let isWrong = props.answerCheck == false
 }
 
 .text {
-  font-size: medium;
+  font-size: large;
 }
 </style>

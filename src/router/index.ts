@@ -25,24 +25,30 @@ const router = createRouter({
       path: '/gettheprize',
       name: 'end',
       component: () => import('../views/PrizeView.vue')
+    },
+    {
+      path: '/2024/:org',
+      name: 'question',
+      component: () => import('../views/QuestionAndAnswerView.vue')
+
     }
   ]
 })
 
-router.beforeEach((to, _from) => {
-  const progressStore = useProgressStore()
-  if (progressStore.progress.hasFinished) {
-    if (to.name == 'end') return
-    else return { name: 'end' }
-  }
+// router.beforeEach((to, _from) => {
+//   const progressStore = useProgressStore()
+//   if (progressStore.progress.hasFinished) {
+//     if (to.name == 'end') return
+//     else return { name: 'end' }
+//   }
 
-  if (!progressStore.progress.hasStarted) {
-    if (to.name == 'home') {
-      progressStore.start()
-      return
-    }
-    if (to.name != 'info') return { name: 'info' }
-  }
-})
+//   if (!progressStore.progress.hasStarted) {
+//     if (to.name == 'home') {
+//       progressStore.start()
+//       return
+//     }
+//     if (to.name != 'info') return { name: 'info' }
+//   }
+// })
 
 export default router

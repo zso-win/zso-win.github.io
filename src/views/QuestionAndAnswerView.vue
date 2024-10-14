@@ -1,51 +1,76 @@
 <template>
-    <div>
-        <n-image></n-image>
-        <p class="text">Hier kommt die Frage</p>
-        <input v-model="inputValue" type="text" placeholder="Enter something..." />
-        <n-button round type="warning" @click="handleButtonClick"><n-icon :component="PaperPlane" /></n-button>
+  <div>
+    <n-image width="350" :src="img" object-fit="scale-down" height="200"></n-image>
+    <p class="text">{{ msg }}</p>
+    <div class="input-container">
+      <input v-model="inputValue" type="text" placeholder="Antworte hier..." @keyup.enter="handleButtonClick" />
+      <n-button round type="warning" @click="handleButtonClick"><n-icon :component="PaperPlane" /></n-button>
     </div>
+    <div v-if="answrValue">
+      <p class="text">Richtig!</p>
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
 import { NIcon, NButton, NImage } from 'naive-ui'
 import { PaperPlane } from '@vicons/fa'
+import { q_n_a } from './q&a'
+import { useAnswerStore } from '@/stores/answers'
 
-defineProps({
-    org: String,
+const props = defineProps({
+  org: String
 })
 
+const answers = useAnswerStore()
+
+const msg = q_n_a[props.org ?? 'na']?.q || 'No question found'
+const answr: RegExp = q_n_a[props.org ?? 'na']?.a
+const img = '/assets/' + q_n_a[props.org ?? 'na']?.img
 
 const inputValue = ref('')
 
+const answrValue = ref(false)
+
 const handleButtonClick = () => {
-    console.log('Input Value:', inputValue.value)
-    // Perform any other action with the input value here
+  if (answr.test(inputValue.value.toLowerCase())) {
+    answrValue.value = true
+    answers.rightAnswer(props.org || 'na')
+  } else {
+    answrValue.value = false
+  }
 }
 </script>
 
 <style scoped>
 /* Add any styles for your component here */
 div {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
 }
 
 input {
-    margin-bottom: 10px;
-    padding: 5px;
-    font-size: 16px;
+  margin-bottom: 10px;
+  padding: 5px;
+  font-size: 16px;
 }
 
 button {
-    padding: 5px 10px;
-    font-size: 16px;
-    cursor: pointer;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 5px;
 }
 
 .text {
-    font-size: large;
+  font-size: large;
 }
 </style>

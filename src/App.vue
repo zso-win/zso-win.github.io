@@ -11,7 +11,7 @@ const isHome = computed(() => route.name == 'home')
 
 <template>
   <header>
-    <h2>SCHNITZELJAGD <br />BEVÖLKERUNGSSCHUTZ-ZONE</h2>
+    <h2>WINTIMÄSS QUIZ <br />BEVÖLKERUNGSSCHUTZ-ZONE</h2>
     <n-image-group v-if="isHome">
       <n-space justify="space-around">
         <n-image height="80" preview-disabled src="/assets/Stapo_Winterthur_Badge.png" object-fit="scale-down" />

@@ -10,16 +10,16 @@ const progressStore = useProgressStore()
 
 let enableButton = ref(false)
 
-const rdProgress = computed(() => (answrStr.answers.get('rd1') ? 50 : 0) + (answrStr.answers.get('rd2') ? 50 : 0))
-const spProgress = computed(() => (answrStr.answers.get('sp1') ? 50 : 0) + (answrStr.answers.get('sp2') ? 50 : 0))
-const fwProgress = computed(() => (answrStr.answers.get('fw1') ? 50 : 0) + (answrStr.answers.get('fw2') ? 50 : 0))
-const zsProgress = computed(() => (answrStr.answers.get('zs1') ? 50 : 0) + (answrStr.answers.get('zs2') ? 50 : 0))
+const rdProgress = computed(() => (answrStr.answers.get('rd') ? 100 : 0))
+const spProgress = computed(() => (answrStr.answers.get('sp') ? 100 : 0))
+const fwProgress = computed(() => (answrStr.answers.get('fw') ? 100 : 0))
+const zsProgress = computed(() => (answrStr.answers.get('zs') ? 100 : 0))
 
 const finished = computed(
   () => rdProgress.value == 100 && spProgress.value == 100 && fwProgress.value == 100 && zsProgress.value == 100
 )
 
-watch(finished, async (newValue, oldValue) => {
+watch(finished, async (newValue, _oldValue) => {
   if (newValue == true) {
     progressStore.finish()
     enableButton.value = true
@@ -96,7 +96,7 @@ button {
       </n-space>
     </n-image-group>
     <n-space v-if="enableButton" justify="center" class="highlight">
-      <n-button strong primary round type="warning" @click="getPrize">Schnitzeljagd beenden und Preis abholen</n-button>
+      <n-button strong primary round type="warning" @click="getPrize">Quiz beenden und Preis abholen</n-button>
     </n-space>
   </div>
 </template>

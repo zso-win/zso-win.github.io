@@ -31,7 +31,7 @@ function getPrize(): void {
   router.push({ name: 'end' })
 }
 
-onMounted(() => { })
+onMounted(() => {})
 </script>
 
 <style scoped>
@@ -46,10 +46,11 @@ img {
 
 button {
   margin: 10px;
+  height: 100px;
 }
 
-.highlight {
-  background-image: linear-gradient(orange, moccasin, orange);
+.txt {
+  margin-bottom: 10px;
 }
 
 .bar {
@@ -95,8 +96,14 @@ button {
         </div>
       </n-space>
     </n-image-group>
-    <n-space v-if="enableButton" justify="center" class="highlight">
-      <n-button strong primary round type="warning" @click="getPrize">Quiz beenden und Preis abholen</n-button>
+    <n-space v-if="enableButton" justify="center">
+      <n-button strong primary round type="warning" @click="getPrize">
+        <div class="txt">
+          <p>Danke fürs Mitmachen!</p>
+          <p>Hol dir deinen Preis bei einer</p>
+          <p>der vier Bevölkerungsschutzorganisationen.</p>
+        </div>
+      </n-button>
     </n-space>
   </div>
 </template>

@@ -6,8 +6,21 @@
       <input v-model="inputValue" type="text" placeholder="Antworte hier..." @keyup.enter="handleButtonClick" />
       <n-button round type="warning" @click="handleButtonClick"><n-icon :component="PaperPlane" /></n-button>
     </div>
-    <div v-if="answrValue">
-      <p class="text">Richtig!</p>
+    <div v-if="rightAnswrValue">
+      <p class="text">
+        <span>
+          <n-icon :component="CheckCircle" color="green" />
+        </span>
+        Richtig! Mach weiter mit dem nächsten QR-Code.
+      </p>
+    </div>
+    <div v-if="wrongAnswrValue">
+      <p class="text">
+        <span>
+          <n-icon :component="TimesCircle" color="red" />
+        </span>
+        Die Antwort ist leider falsch. Versuche es noch einmal!
+      </p>
     </div>
   </div>
 </template>
@@ -15,7 +28,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { NIcon, NButton, NImage } from 'naive-ui'
-import { PaperPlane } from '@vicons/fa'
+import { PaperPlane, CheckCircle, TimesCircle } from '@vicons/fa'
 import { q_n_a } from './q&a'
 import { useAnswerStore } from '@/stores/answers'
 
@@ -31,14 +44,17 @@ const img = '/assets/' + q_n_a[props.org ?? 'na']?.img
 
 const inputValue = ref('')
 
-const answrValue = ref(false)
+const rightAnswrValue = ref(false)
+const wrongAnswrValue = ref(false)
 
 const handleButtonClick = () => {
   if (answr.test(inputValue.value.toLowerCase())) {
-    answrValue.value = true
+    rightAnswrValue.value = true
+    wrongAnswrValue.value = false
     answers.rightAnswer(props.org || 'na')
   } else {
-    answrValue.value = false
+    rightAnswrValue.value = false
+    wrongAnswrValue.value = true
   }
 }
 </script>

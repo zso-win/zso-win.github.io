@@ -23,7 +23,7 @@ export const q_n_a = {
   },
   sp: {
     // stadtpolizei
-    q: 'Wie lautet das Funk-Rufzeichen userer Streifenwagen?',
+    q: 'Wie lautet das Funk-Rufzeichen unserer Streifenwagen?',
     a: new RegExp('^alba$'),
     img: 'sp_funk.jpg'
   },

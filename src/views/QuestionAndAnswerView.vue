@@ -31,6 +31,7 @@ import { NIcon, NButton, NImage } from 'naive-ui'
 import { PaperPlane, CheckCircle, TimesCircle } from '@vicons/fa'
 import { q_n_a } from './q&a'
 import { useAnswerStore } from '@/stores/answers'
+import { onBeforeRouteUpdate } from 'vue-router'
 
 const props = defineProps({
   org: String
@@ -38,9 +39,9 @@ const props = defineProps({
 
 const answers = useAnswerStore()
 
-const msg = q_n_a[props.org ?? 'na']?.q || 'No question found'
-const answr: RegExp = q_n_a[props.org ?? 'na']?.a
-const img = '/assets/' + q_n_a[props.org ?? 'na']?.img
+const msg = ref(q_n_a[props.org ?? 'na']?.q || 'No question found')
+const answr = ref(q_n_a[props.org ?? 'na']?.a || 'test')
+const img = ref('/assets/' + q_n_a[props.org ?? 'na']?.img)
 
 const inputValue = ref('')
 
@@ -48,7 +49,8 @@ const rightAnswrValue = ref(false)
 const wrongAnswrValue = ref(false)
 
 const handleButtonClick = () => {
-  if (answr.test(inputValue.value.toLowerCase())) {
+  const answer_regex = new RegExp(answr.value, 'i')
+  if (answer_regex.test(inputValue.value.toLowerCase())) {
     rightAnswrValue.value = true
     wrongAnswrValue.value = false
     answers.rightAnswer(props.org || 'na')
@@ -57,6 +59,19 @@ const handleButtonClick = () => {
     wrongAnswrValue.value = true
   }
 }
+
+onBeforeRouteUpdate(async (to) => {
+  const org = to.params.org
+  const org_param = Array.isArray(org) ? org[0] : org
+  msg.value = q_n_a[org_param ?? 'na']?.q || 'No question found'
+  answr.value = q_n_a[org_param ?? 'na']?.a
+  img.value = '/assets/' + q_n_a[org_param ?? 'na']?.img
+
+  // Reset the input field and the answer values
+  inputValue.value = ''
+  rightAnswrValue.value = false
+  wrongAnswrValue.value = false
+})
 </script>
 
 <style scoped>

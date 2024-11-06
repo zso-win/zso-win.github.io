@@ -19,7 +19,7 @@ const finished = computed(
   () => rdProgress.value == 100 && spProgress.value == 100 && fwProgress.value == 100 && zsProgress.value == 100
 )
 
-watch(finished, async (newValue, _oldValue) => {
+watch(finished, async (newValue) => {
   if (newValue == true) {
     progressStore.finish()
     enableButton.value = true
@@ -29,6 +29,11 @@ watch(finished, async (newValue, _oldValue) => {
 function getPrize(): void {
   enableButton.value = false
   router.push({ name: 'end' })
+}
+
+function handleClick(org: string): void {
+  if (progressStore.progress.hasFinished) return
+  router.push({ name: 'question', params: { org: org } })
 }
 
 onMounted(() => {})
@@ -66,28 +71,28 @@ button {
   <div class="bbox">
     <n-image-group>
       <n-space justify="space-around">
-        <div>
+        <div @click="handleClick('sp')">
           <img class="icon" src="@/assets/adp.png" />
           <div class="bar">
             <n-progress type="line" status="warning" :percentage="spProgress" indicator-placement="inside" />
           </div>
           <p>Polizei</p>
         </div>
-        <div>
+        <div @click="handleClick('fw')">
           <img class="icon" src="@/assets/adfw.png" />
           <div class="bar">
             <n-progress type="line" status="warning" :percentage="fwProgress" indicator-placement="inside" />
           </div>
           <p>Feuerwehr</p>
         </div>
-        <div>
+        <div @click="handleClick('rd')">
           <img class="icon" src="@/assets/ads.png" />
           <div class="bar">
             <n-progress type="line" status="warning" :percentage="rdProgress" indicator-placement="inside" />
           </div>
           <p>Rettungs-<br />dienst</p>
         </div>
-        <div>
+        <div @click="handleClick('zs')">
           <img class="icon" src="@/assets/adzs.png" />
           <div class="bar">
             <n-progress type="line" status="warning" :percentage="zsProgress" indicator-placement="inside" />

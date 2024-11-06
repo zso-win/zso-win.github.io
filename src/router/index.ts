@@ -40,7 +40,7 @@ const router = createRouter({
   ]
 })
 
-router.beforeEach((to, _from) => {
+router.beforeEach((to) => {
   const progressStore = useProgressStore()
   if (progressStore.progress.hasFinished) {
     if (to.name == 'end') return

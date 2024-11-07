@@ -1,1 +1,0 @@
-import{ay as t,az as s}from"./index-4c9e1ccc.js";const i=t("questions",{state:()=>({questions:s("questions",new Map,localStorage,{mergeDefaults:!0})}),actions:{activateQuestion(e){this.questions.set(e,!0)},isActive(e){return this.questions.get(e)??!1},reset(){this.questions.clear()}}});export{i as u};

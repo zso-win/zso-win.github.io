@@ -6,7 +6,7 @@ export const q_n_a = {
   fw: {
     // feuerwehr
     q: 'Wie lange ist der markierte Schlauch? (in Metern)',
-    a: '^20 ?(m|meter)?$',
+    a: '^6 ?(m|meter)?$',
     img: 'fw_schlauch.jpg'
   },
   zs: {

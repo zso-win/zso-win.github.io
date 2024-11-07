@@ -23,7 +23,7 @@ export const q_n_a = {
   },
   sp: {
     // stadtpolizei
-    q: 'Wie wird der Streifenwagen durch die Einsatzzentrale angefunkt?',
+    q: 'Mit welchem Funkspruch wird unser Streifenwagen von der Einsatzzentrale angefunkt?',
     a: '^alba$',
     img: 'sp_funk.jpg'
   },

@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import WelcomeItem from './WelcomeItem.vue'
-import SupportIcon from './icons/IconSupport.vue'
-import CommunityIcon from './icons/IconDocumentation.vue'
 // import { useProgressStore } from '@/stores/progress'
 // import { useAnswerStore } from '@/stores/answers'
 // import { useQuestionStore } from '@/stores/questions'
@@ -18,42 +15,40 @@ import CommunityIcon from './icons/IconDocumentation.vue'
 </script>
 
 <template>
-  <WelcomeItem>
-    <template #icon>
-      <SupportIcon />
-    </template>
-    <template #heading>Winti Mäss Quiz</template>
+  <div class="heading">Winti Mäss Quiz</div>
 
-    Das virtuelle Quiz durch den Schadenplatz in der Bevölkerungsschutz-Zone der Partnerorganisationen
-    <i>Rettungsdienst, Stadtpolizei und Schutz & Intervention</i> Winterthur.
-  </WelcomeItem>
+  Das virtuelle Quiz durch den Schadenplatz in der Bevölkerungsschutz-Zone der Partnerorganisationen
+  <i>Rettungsdienst, Stadtpolizei und Schutz & Intervention</i> Winterthur.
 
-  <WelcomeItem>
-    <template #icon>
-      <CommunityIcon />
-    </template>
-    <template #heading>So funktioniert's:</template>
+  <div class="heading">So funktioniert's</div>
 
-    Scanne den QR-Code mit der Frage und suche danach die richtige Antwort auf dem Schadenplatz. Wenn du alle Fragen
-    beantwortet hast, kannst du bei einer der Partnerorganisationen deinen Gewinn abholen.
-  </WelcomeItem>
+  Beantworte die erste Frage. Tippe auf die Piktos oben und gelange zur nächsten Frage. Wenn du alle beantwortet hast,
+  kannst du bei einer der Partnerorganisationen deinen Preis abholen.
 
   <!-- <WelcomeItem v-if="!hasStarted">
     <template #icon>
       <IconEcosystem />
     </template>
-    <template #heading>Bereit?</template>
+<template #heading>Bereit?</template>
 
-    Gehe an den Start, um mit der Schnitzeljagd zu beginnen!
-  </WelcomeItem>
+Gehe an den Start, um mit der Schnitzeljagd zu beginnen!
+</WelcomeItem>
 
-  <WelcomeItem v-if="hasStarted">
-    <template #icon>
+<WelcomeItem v-if="hasStarted">
+  <template #icon>
       <IconTooling />
     </template>
-    <template #heading>Los geht's</template>
+  <template #heading>Los geht's</template>
 
-    Scanne die erste Frage und suche nach der Antwort, dann geht es weiter mit der zweiten Frage, der dritten usw…. Die
-    Reihenfolge spielt dabei keine Rolle. Viel Spass!
-  </WelcomeItem> -->
+  Scanne die erste Frage und suche nach der Antwort, dann geht es weiter mit der zweiten Frage, der dritten usw…. Die
+  Reihenfolge spielt dabei keine Rolle. Viel Spass!
+</WelcomeItem> -->
 </template>
+<style scoped>
+.heading {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+  color: var(--color-heading);
+}
+</style>

@@ -11,7 +11,7 @@
         <span>
           <n-icon :component="CheckCircle" color="green" />
         </span>
-        Richtig! Mach weiter mit dem nächsten QR-Code.
+        Richtig! Tippe auf das nächste Pikto oben, um zur nächsten Frage zu gelangen.
       </p>
     </div>
     <div v-if="wrongAnswrValue">

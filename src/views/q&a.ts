@@ -6,7 +6,7 @@ export const q_n_a = {
   fw: {
     // feuerwehr
     q: 'Wie lange ist der markierte Schlauch? (in Metern)',
-    a: '^6 ?(m|meter)?$',
+    a: '^10 ?(m|meter)?$',
     img: 'fw_schlauch.jpg'
   },
   zs: {
@@ -29,6 +29,6 @@ export const q_n_a = {
   },
   na: {
     q: 'Ooops! da ist wohl etwas schief gelaufen',
-    a: new RegExp('')
+    a: null
   }
 } as IIndexable

@@ -17,7 +17,7 @@
 <template>
   <div class="heading">Winti Mäss Quiz</div>
 
-  Das virtuelle Quiz durch den Schadenplatz in der Bevölkerungsschutz-Zone der Partnerorganisationen
+  Das virtuelle Quiz in der Bevölkerungsschutz-Zone der Partnerorganisationen
   <i>Rettungsdienst, Stadtpolizei und Schutz & Intervention</i> Winterthur.
 
   <div class="heading">So funktioniert's</div>

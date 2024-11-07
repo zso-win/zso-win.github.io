@@ -14,6 +14,14 @@
         Richtig! Tippe auf das nächste Pikto oben, um zur nächsten Frage zu gelangen.
       </p>
     </div>
+    <div v-if="lastAnswer">
+      <p class="text">
+        <span>
+          <n-icon :component="CheckCircle" color="green" />
+        </span>
+        Grossartig! Du hast alle Fragen beantwortet!
+      </p>
+    </div>
     <div v-if="wrongAnswrValue">
       <p class="text">
         <span>
@@ -26,18 +34,20 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 import { NIcon, NButton, NImage } from 'naive-ui'
 import { PaperPlane, CheckCircle, TimesCircle } from '@vicons/fa'
 import { q_n_a } from './q&a'
 import { useAnswerStore } from '@/stores/answers'
 import { onBeforeRouteUpdate } from 'vue-router'
+import { useProgressStore } from '@/stores/progress'
 
 const props = defineProps({
   org: String
 })
 
 const answers = useAnswerStore()
+const progress = useProgressStore()
 
 const msg = ref(q_n_a[props.org ?? 'na']?.q || 'No question found')
 const answr = ref(q_n_a[props.org ?? 'na']?.a || 'test')
@@ -47,18 +57,27 @@ const inputValue = ref('')
 
 const rightAnswrValue = ref(false)
 const wrongAnswrValue = ref(false)
+const lastAnswer = ref(false)
 
 const handleButtonClick = () => {
-  const answer_regex = new RegExp(answr.value, 'i')
-  if (answer_regex.test(inputValue.value.toLowerCase())) {
-    rightAnswrValue.value = true
-    wrongAnswrValue.value = false
+  const isCorrectAnswer = new RegExp(answr.value, 'i').test(inputValue.value.toLowerCase())
+  rightAnswrValue.value = isCorrectAnswer
+  wrongAnswrValue.value = !isCorrectAnswer
+
+  if (isCorrectAnswer) {
     answers.rightAnswer(props.org || 'na')
-  } else {
-    rightAnswrValue.value = false
-    wrongAnswrValue.value = true
   }
 }
+
+watch(
+  () => progress.progress.hasFinished,
+  (newVal) => {
+    if (newVal == true) {
+      lastAnswer.value = true
+      rightAnswrValue.value = false
+    }
+  }
+)
 
 onBeforeRouteUpdate(async (to) => {
   const org = to.params.org

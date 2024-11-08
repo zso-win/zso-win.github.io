@@ -24,7 +24,7 @@ export const q_n_a = {
   sp: {
     // stadtpolizei
     q: 'Mit welchem Funkspruch wird unser Streifenwagen von der Einsatzzentrale angefunkt?',
-    a: '^alba$',
+    a: '^alba ?202$',
     img: 'sp_funk.jpg'
   },
   na: {

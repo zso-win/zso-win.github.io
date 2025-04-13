@@ -33,6 +33,11 @@ const router = createRouter({
       props: true
     },
     {
+      path: '/sicherheitstag',
+      name: 'sicherheitstag',
+      component: () => import('../views/SicherheitstagView.vue')
+    },
+    {
       path: '/:catchAll(.*)',
       name: 'not-found',
       component: () => HomeView

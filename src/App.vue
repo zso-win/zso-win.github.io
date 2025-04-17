@@ -11,7 +11,7 @@ const isHome = computed(() => route.name == 'home')
 
 <template>
   <header>
-    <h2>WINTI MÄSS QUIZ <br />BEVÖLKERUNGSSCHUTZ-ZONE</h2>
+    <h2>TAG DER SICHERHEIT 2025</h2>
     <n-image-group v-if="isHome">
       <n-space justify="space-around">
         <n-image height="80" preview-disabled src="/assets/Stapo_Winterthur_Badge.png" object-fit="scale-down" />
@@ -29,11 +29,10 @@ const isHome = computed(() => route.name == 'home')
 header {
   line-height: 1.5;
   max-height: 100vh;
-  background-color: moccasin;
 }
 
 h2 {
-  font: bold 20px 'Helvetica', 'Trebuchet MS', Arial, sans-serif;
+  font: bold 25px 'Helvetica', 'Trebuchet MS', Arial, sans-serif;
   margin-bottom: 10px;
   padding: 5px;
 }

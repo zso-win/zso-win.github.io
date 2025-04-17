@@ -2,7 +2,7 @@
   --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
   --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
 
-  --vt-c-text-light-1: #105b6d;
+  --vt-c-text-light-1: #1a4d66;
   --vt-c-text-light-2: #e3000b;
 }
 
@@ -30,7 +30,13 @@
 body {
   min-height: 100vh;
   color: var(--color-text);
-  background: var(--color-background);
+  background: repeating-linear-gradient(
+    45deg,
+    #e6f3ff,
+    #e6f3ff 60px,
+    white 60px,
+    white 90px
+  );
   transition: color 0.5s, background-color 0.5s;
   line-height: 1.6;
   font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans',

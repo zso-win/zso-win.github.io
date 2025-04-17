@@ -33,9 +33,24 @@ const router = createRouter({
       props: true
     },
     {
-      path: '/sicherheitstag',
-      name: 'sicherheitstag',
-      component: () => import('../views/SicherheitstagView.vue')
+      path: '/sicherheitstag/Fw',
+      name: 'sicherheitstagFw',
+      component: () => import('../views/SicherheitstagFwView.vue')
+    },
+    {
+      path: '/sicherheitstag/Sp',
+      name: 'sicherheitstagSp',
+      component: () => import('../views/SicherheitstagSpView.vue')
+    },
+    {
+      path: '/sicherheitstag/Rd', 
+      name: 'sicherheitstagRd',
+      component: () => import('../views/SicherheitstagRdView.vue')
+    },
+    {
+      path: '/sicherheitstag/Zs',
+      name: 'sicherheitstagZs',
+      component: () => import('../views/SicherheitstagZsView.vue')
     },
     {
       path: '/:catchAll(.*)',

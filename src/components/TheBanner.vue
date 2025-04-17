@@ -72,28 +72,28 @@ button {
     <n-image-group>
       <n-space justify="space-around">
         <div @click="handleClick('sp')">
-          <img class="icon" src="@/assets/adp.png" style="background-color: moccasin;"/>
+          <img class="icon" src="@/assets/adp.png" style="background-color: moccasin" />
           <div class="bar">
             <n-progress type="line" status="warning" :percentage="spProgress" indicator-placement="inside" />
           </div>
           <p>Polizei</p>
         </div>
         <div @click="handleClick('fw')">
-          <img class="icon" src="@/assets/adfw.png" style="background-color: moccasin;"/>
+          <img class="icon" src="@/assets/adfw.png" style="background-color: moccasin" />
           <div class="bar">
             <n-progress type="line" status="warning" :percentage="fwProgress" indicator-placement="inside" />
           </div>
           <p>Feuerwehr</p>
         </div>
         <div @click="handleClick('rd')">
-          <img class="icon" src="@/assets/ads.png" style="background-color: moccasin;"/>
+          <img class="icon" src="@/assets/ads.png" style="background-color: moccasin" />
           <div class="bar">
             <n-progress type="line" status="warning" :percentage="rdProgress" indicator-placement="inside" />
           </div>
           <p>Rettungs-<br />dienst</p>
         </div>
         <div @click="handleClick('zs')">
-          <img class="icon" src="@/assets/adzs.png" style="background-color: moccasin;"/>
+          <img class="icon" src="@/assets/adzs.png" style="background-color: moccasin" />
           <div class="bar">
             <n-progress type="line" status="warning" :percentage="zsProgress" indicator-placement="inside" />
           </div>

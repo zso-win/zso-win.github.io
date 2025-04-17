@@ -43,7 +43,7 @@ const router = createRouter({
       component: () => import('../views/SicherheitstagSpView.vue')
     },
     {
-      path: '/sicherheitstag/Rd', 
+      path: '/sicherheitstag/Rd',
       name: 'sicherheitstagRd',
       component: () => import('../views/SicherheitstagRdView.vue')
     },

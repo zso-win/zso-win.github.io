@@ -1,7 +1,7 @@
 <template>
   <div class="sicherheitstag">
     <div class="content">
-      <n-image width="290" src="/assets/sp_funk.jpg" object-fit="scale-down" height="200"></n-image>
+      <n-image width="290" src="/assets/POL_Hund_mit_Weste.jpg" object-fit="scale-down" height="200"></n-image>
       <p class="text">{{ question }}</p>
       <div class="input-container">
         <n-input-number
@@ -44,18 +44,23 @@
 import { ref } from 'vue'
 import { NIcon, NButton, NImage, NInputNumber } from 'naive-ui'
 import { PaperPlane, CheckCircle, TimesCircle } from '@vicons/fa'
+import { useAnswerStore } from '@/stores/answers'
 
+const answerStore = useAnswerStore()
 const question = ref('Wie schwer ist die «schwere» Polizei-Weste?')
 const correctAnswer = 14
 
 const userAnswer = ref<number | null>(null)
-const isCorrect = ref(false)
+const isCorrect = ref(answerStore.answers.get('sp'))
 const isWrong = ref(false)
 
 const handleSubmit = () => {
   const isCorrectAnswer = userAnswer.value === correctAnswer
   isCorrect.value = isCorrectAnswer
   isWrong.value = !isCorrectAnswer
+  if (isCorrect.value) {
+    answerStore.rightAnswer('sp')
+  }
 }
 </script>
 

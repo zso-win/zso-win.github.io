@@ -15,9 +15,9 @@
 </script>
 
 <template>
-  <div class="heading">Winti Mäss Quiz</div>
+  <div class="heading">Tag der Sicherheit Quiz</div>
 
-  Das virtuelle Quiz in der Bevölkerungsschutz-Zone der Partnerorganisationen
+  Das virtuelle Quiz der Partnerorganisationen
   <i>Rettungsdienst, Stadtpolizei und Schutz & Intervention</i> Winterthur.
 
   <div class="heading">So funktioniert's</div>

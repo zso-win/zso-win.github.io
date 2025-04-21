@@ -1,4 +1,4 @@
-import{c as x,a as C,M as p,O as u,e as _,d as l,u as y,f as a,g as $,aU as z,ae as L,h as g,ag as b,p as d,j as h,o as m}from"./index-58bfaab8.js";function k(e){const{textColorBase:t,opacity1:o,opacity2:i,opacity3:s,opacity4:n,opacity5:c}=e;return{color:t,opacity1Depth:o,opacity2Depth:i,opacity3Depth:s,opacity4Depth:n,opacity5Depth:c}}const P={name:"Icon",common:x,self:k},B=P,S=C("icon",`
+import{c as x,a as C,M as p,O as u,e as _,d as l,u as y,f as a,g as $,aU as z,ae as L,h as g,ag as b,p as d,j as h,o as m}from"./index-303a478b.js";function k(e){const{textColorBase:t,opacity1:o,opacity2:i,opacity3:s,opacity4:n,opacity5:c}=e;return{color:t,opacity1Depth:o,opacity2Depth:i,opacity3Depth:s,opacity4Depth:n,opacity5Depth:c}}const P={name:"Icon",common:x,self:k},B=P,S=C("icon",`
  height: 1em;
  width: 1em;
  line-height: 1em;

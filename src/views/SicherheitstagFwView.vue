@@ -1,7 +1,7 @@
 <template>
   <div class="sicherheitstag">
     <div class="content">
-      <n-image width="290" src="/assets/fw_schlauch.jpg" object-fit="scale-down" height="200"></n-image>
+      <n-image width="290" src="/assets/BF_PSA.png" object-fit="scale-down" height="200"></n-image>
       <p class="text">{{ question }}</p>
       <div class="answers-grid">
         <div class="grid-container">
@@ -53,13 +53,15 @@
 import { ref } from 'vue'
 import { NIcon, NButton, NImage } from 'naive-ui'
 import { PaperPlane, CheckCircle, TimesCircle } from '@vicons/fa'
+import { useAnswerStore } from '@/stores/answers'
 
+const answerStore = useAnswerStore()
 const question = ref('Was bedeuted «Popcorn» in der Feuerwehr?')
 const answers = ref(['Zeit für Fernsehabend', 'Gebundener Schlauch', 'Pausensnack'])
 const correctAnswer = answers.value[1]
 
 const selectedAnswer = ref<string>('')
-const isCorrect = ref(false)
+const isCorrect = ref(answerStore.answers.get('fw'))
 const isWrong = ref(false)
 
 const toggleAnswer = (answer: string) => {
@@ -72,6 +74,9 @@ const handleSubmit = () => {
   const isCorrectAnswer = selectedAnswer.value === correctAnswer
   isCorrect.value = isCorrectAnswer
   isWrong.value = !isCorrectAnswer
+  if (isCorrect.value) {
+    answerStore.rightAnswer('fw')
+  }
 }
 </script>
 

@@ -1,7 +1,7 @@
 <template>
   <div class="sicherheitstag">
     <div class="content">
-      <n-image width="290" src="/assets/zs_truemmer.jpg" object-fit="scale-down" height="200"></n-image>
+      <n-image width="290" src="/assets/ZS_Funkgeraetausgabe_quer.jpg" object-fit="scale-down" height="200"></n-image>
       <p class="text">{{ question }}</p>
       <div class="answers-grid">
         <div class="grid-container">
@@ -51,13 +51,17 @@
 import { ref } from 'vue'
 import { NIcon, NButton, NImage } from 'naive-ui'
 import { PaperPlane, CheckCircle, TimesCircle } from '@vicons/fa'
+import { useAnswerStore } from '@/stores/answers'
+
+const answerStore = useAnswerStore()
+// const progress = useProgressStore()
 
 const question = ref('Zivilschutz ist reine Männersache:')
 const answers = ref(['Richtig', 'Falsch'])
 const correctAnswer = answers.value[0] // Only one correct answer now
 
 const selectedAnswer = ref<string>('')
-const isCorrect = ref(false)
+const isCorrect = ref(answerStore.answers.get('zs'))
 const isWrong = ref(false)
 
 const toggleAnswer = (answer: string) => {
@@ -70,6 +74,9 @@ const handleSubmit = () => {
   const isCorrectAnswer = selectedAnswer.value === correctAnswer
   isCorrect.value = isCorrectAnswer
   isWrong.value = !isCorrectAnswer
+  if (isCorrect.value) {
+    answerStore.rightAnswer('zs')
+  }
 }
 </script>
 

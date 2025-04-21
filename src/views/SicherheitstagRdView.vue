@@ -1,7 +1,7 @@
 <template>
   <div class="sicherheitstag">
     <div class="content">
-      <n-image width="290" src="/assets/rd_rettungstrage.jpg" object-fit="scale-down" height="200"></n-image>
+      <n-image width="290" src="/assets/RDW_Sugi_quer.jpg" object-fit="scale-down" height="200"></n-image>
       <p class="text">{{ question }}</p>
       <div class="answers-grid">
         <div class="grid-container">
@@ -49,13 +49,15 @@
 import { ref } from 'vue'
 import { NIcon, NButton, NImage } from 'naive-ui'
 import { PaperPlane, CheckCircle, TimesCircle } from '@vicons/fa'
+import { useAnswerStore } from '@/stores/answers'
 
+const answerStore = useAnswerStore()
 const question = ref('Wozu benutzt der Rettungsdienst eine Sugi ?')
 const answers = ref(['Absaugen von Luft', 'Aufblasen der Trage', 'Entfernen von Sekret', 'Reinigen des Rettungswagen'])
 const correctAnswers = [answers.value[0], answers.value[2]]
 
 const selectedAnswers = ref<string[]>([])
-const isCorrect = ref(false)
+const isCorrect = ref(answerStore.answers.get('rd'))
 const isWrong = ref(false)
 
 const toggleAnswer = (answer: string) => {
@@ -75,6 +77,9 @@ const handleSubmit = () => {
     correctAnswers.every((answer) => selectedAnswers.value.includes(answer))
   isCorrect.value = isCorrectAnswer
   isWrong.value = !isCorrectAnswer
+  if (isCorrect.value) {
+    answerStore.rightAnswer('rd')
+  }
 }
 </script>
 

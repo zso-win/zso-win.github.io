@@ -64,7 +64,7 @@ main div {
     :closable="false"
     :show-icon="false"
     preset="dialog"
-    title="Schnitzeljagd neu starten"
+    title="Quiz neu starten"
     content="Bist du sicher?"
     positive-text="Ja"
     negative-text="Nein"

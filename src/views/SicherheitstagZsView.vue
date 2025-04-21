@@ -54,11 +54,10 @@ import { PaperPlane, CheckCircle, TimesCircle } from '@vicons/fa'
 import { useAnswerStore } from '@/stores/answers'
 
 const answerStore = useAnswerStore()
-// const progress = useProgressStore()
 
 const question = ref('Zivilschutz ist reine Männersache:')
 const answers = ref(['Richtig', 'Falsch'])
-const correctAnswer = answers.value[0] // Only one correct answer now
+const correctAnswer = answers.value[1]
 
 const selectedAnswer = ref<string>('')
 const isCorrect = ref(answerStore.answers.get('zs'))

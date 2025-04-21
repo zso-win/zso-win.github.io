@@ -15,23 +15,23 @@ const router = createRouter({
       name: 'info',
       component: HomeView
     },
-    {
-      path: '/:org/:id/:name',
-      name: 'panel',
-      component: () => import('../views/QuestionView.vue'),
-      props: true
-    },
+    // {
+    //   path: '/:org/:id/:name',
+    //   name: 'panel',
+    //   component: () => import('../views/QuestionView.vue'),
+    //   props: true
+    // },
     {
       path: '/gettheprize',
       name: 'end',
       component: () => import('../views/PrizeView.vue')
     },
-    {
-      path: '/2024/:org',
-      name: 'question',
-      component: () => import('../views/QuestionAndAnswerView.vue'),
-      props: true
-    },
+    // {
+    //   path: '/2024/:org',
+    //   name: 'question',
+    //   component: () => import('../views/QuestionAndAnswerView.vue'),
+    //   props: true
+    // },
     {
       path: '/sicherheitstag/Fw',
       name: 'sicherheitstagFw',

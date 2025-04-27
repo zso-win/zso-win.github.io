@@ -44,7 +44,7 @@ p {
 
 <template>
   <main>
-    <p>Gratulation! Du kannst dir deinen Preis bei einer der drei Partnerorganisationen abholen.</p>
+    <p>Gratulation! Du kannst dir deinen Preis bei einer der drei Partnerorganisationen an deren Infostand abholen.</p>
     <n-space justify="space-around">
       <n-image preview-disabled src="/assets/Logo_RettungdienstWinterthur.png" object-fit="scale-down" height="80" />
       <n-image preview-disabled src="/assets/SIW-Badge_pos.png" object-fit="scale-down" height="80" />

@@ -1,26 +1,28 @@
 <template>
   <div class="sicherheitstag">
     <div class="content">
-      <n-image width="290" src="/assets/BF_PSA.png" object-fit="scale-down" height="200"></n-image>
-      <p class="text">{{ question }}</p>
-      <div class="answers-grid">
-        <div class="grid-container">
-          <n-button
-            v-for="(answer, index) in answers"
-            :key="index"
-            class="answer-button"
-            :type="selectedAnswer === answer ? 'info' : 'default'"
-            @click="toggleAnswer(answer)"
-            :disabled="isCorrect"
-          >
-            {{ answer }}
+      <n-image v-if="isCorrect" width="290" src="/assets/BF_PSA.png" object-fit="scale-down" height="200"></n-image>
+      <div v-if="!isCorrect">
+        <p class="text">{{ question }}</p>
+        <div class="answers-grid">
+          <div class="grid-container">
+            <n-button
+              v-for="(answer, index) in answers"
+              :key="index"
+              class="answer-button"
+              :type="selectedAnswer === answer ? 'info' : 'default'"
+              @click="toggleAnswer(answer)"
+              :disabled="isCorrect"
+            >
+              {{ answer }}
+            </n-button>
+          </div>
+        </div>
+        <div class="submit-button">
+          <n-button round type="info" @click="handleSubmit" :disabled="isCorrect">
+            <n-icon :component="PaperPlane" />
           </n-button>
         </div>
-      </div>
-      <div class="submit-button">
-        <n-button round type="info" @click="handleSubmit" :disabled="isCorrect">
-          <n-icon :component="PaperPlane" />
-        </n-button>
       </div>
       <div v-if="isCorrect">
         <p class="text">
@@ -121,6 +123,5 @@ const handleSubmit = () => {
 
 .text {
   font-size: large;
-  margin: 15px 0;
 }
 </style>

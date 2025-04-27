@@ -1,12 +1,37 @@
 <script setup lang="ts">
 import { RouterView, useRoute } from 'vue-router'
 import TheBanner from './components/TheBanner.vue'
-import { NImage, NImageGroup, NSpace } from 'naive-ui'
+import { NImage, NImageGroup, NSpace, NConfigProvider } from 'naive-ui'
 import { computed } from 'vue'
 
 const route = useRoute()
 
 const isHome = computed(() => route.name == 'home')
+
+const themeOverrides = {
+  Input: {
+    borderHover: '1px solid #2080f0',
+    borderFocus: '1px solid #2080f0',
+    caretColor: '#2080f0'
+  },
+  Button: {
+    textColorHover: '#2080f0',
+    textColorTextPressed: '#2080f0',
+    textColorPressed: '#2080f0',
+    textColorFocus: '#2080f0',
+    textColorTextFocus: '#2080f0',
+    rippleColor: '#2080f0',
+    textColorTextHover: '#2080f0',
+    textColorGhostHover: '#2080f0',
+    textColorGhostFocus: '#2080f0',
+    textColorGhostPressed: '#2080f0',
+    borderHover: '1px solid #2080f0',
+    borderPressed: '1px solid #2080f0',
+    borderFocus: '1px solid #2080f0',
+    borderHoverPrimary: '1px solid #2080f0',
+    textColor: '#1a4d66'
+  }
+}
 </script>
 
 <template>
@@ -15,14 +40,16 @@ const isHome = computed(() => route.name == 'home')
     <n-image-group v-if="isHome">
       <n-space justify="space-around">
         <n-image height="80" preview-disabled src="/assets/Stapo_Winterthur_Badge.png" object-fit="scale-down" />
-        <n-image height="80" preview-disabled src="/assets/SIW_Badge.png" object-fit="scale-down" />
+        <n-image height="80" preview-disabled src="/assets/SIW-Badge_pos.png" object-fit="scale-down" />
         <n-image height="80" preview-disabled src="/assets/Logo_RettungdienstWinterthur.png" object-fit="scale-down" />
       </n-space>
     </n-image-group>
     <TheBanner class="tb-space"></TheBanner>
   </header>
 
-  <RouterView />
+  <n-config-provider :theme-overrides="themeOverrides">
+    <RouterView />
+  </n-config-provider>
 </template>
 
 <style scoped>

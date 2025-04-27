@@ -15,7 +15,7 @@
 </script>
 
 <template>
-  <div class="heading">Tag der Sicherheit Quiz</div>
+  <div class="heading">Quiz «Tag der Sicherheit»</div>
 
   Das virtuelle Quiz der Partnerorganisationen
   <i>Rettungsdienst, Stadtpolizei und Schutz & Intervention</i> Winterthur.
@@ -23,7 +23,7 @@
   <div class="heading">So funktioniert's</div>
 
   Beantworte die erste Frage. Tippe auf die Piktos oben und gelange zur nächsten Frage. Wenn du alle beantwortet hast,
-  kannst du bei einer der Partnerorganisationen deinen Preis abholen.
+  kannst du bei einer der Partnerorganisationen deinen Preis an deren Infostand abholen.
 
   <!-- <WelcomeItem v-if="!hasStarted">
     <template #icon>

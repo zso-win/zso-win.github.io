@@ -1,22 +1,30 @@
 <template>
   <div class="sicherheitstag">
     <div class="content">
-      <n-image width="290" src="/assets/POL_Hund_mit_Weste.jpg" object-fit="scale-down" height="200"></n-image>
-      <p class="text">{{ question }}</p>
-      <div class="input-container">
-        <n-input-number
-          v-model:value="userAnswer"
-          :show-button="false"
-          placeholder=""
-          :disabled="isCorrect"
-          class="weight-input"
-        />
-        <span class="unit">kg</span>
-      </div>
-      <div class="submit-button">
-        <n-button round type="info" @click="handleSubmit" :disabled="isCorrect">
-          <n-icon :component="PaperPlane" />
-        </n-button>
+      <n-image
+        v-if="isCorrect"
+        width="290"
+        src="/assets/POL_Hund_mit_Weste.jpg"
+        object-fit="scale-down"
+        height="200"
+      ></n-image>
+      <div v-if="!isCorrect">
+        <p class="text">{{ question }}</p>
+        <div class="input-container">
+          <n-input-number
+            v-model:value="userAnswer"
+            :show-button="false"
+            placeholder=""
+            :disabled="isCorrect"
+            class="weight-input"
+          />
+          <span class="unit">kg</span>
+        </div>
+        <div class="submit-button">
+          <n-button round type="info" @click="handleSubmit" :disabled="isCorrect">
+            <n-icon :component="PaperPlane" />
+          </n-button>
+        </div>
       </div>
       <div v-if="isCorrect">
         <p class="text">
@@ -103,6 +111,5 @@ const handleSubmit = () => {
 
 .text {
   font-size: large;
-  margin: 15px 0;
 }
 </style>

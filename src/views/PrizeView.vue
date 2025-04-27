@@ -3,7 +3,7 @@ import router from '@/router'
 import { useAnswerStore } from '@/stores/answers'
 import { useProgressStore } from '@/stores/progress'
 import { useQuestionStore } from '@/stores/questions'
-import { NImage, NButton, NModal } from 'naive-ui'
+import { NImage, NButton, NModal, NSpace } from 'naive-ui'
 import { ref } from 'vue'
 
 const answers = useAnswerStore()
@@ -28,32 +28,28 @@ function onNegativeClick() {
 }
 </script>
 
-<style>
+<style scoped>
 main div {
   display: flex;
   justify-content: center;
-  padding-top: 20px;
+  padding-top: 10px;
+}
+p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+  color: var(--color-heading);
 }
 </style>
 
 <template>
   <main>
-    <p>Gratulation! Du kannst dir deinen Preis bei einer der vier Partnerorganisationen abholen.</p>
-    <n-image
-      width="350"
-      preview-disabled
-      src="/assets/Logo_RettungdienstWinterthur.png"
-      object-fit="scale-down"
-      height="200"
-    />
-    <n-image width="350" preview-disabled src="/assets/SIW_Badge.png" object-fit="scale-down" height="200" />
-    <n-image
-      width="350"
-      preview-disabled
-      src="/assets/Stapo_Winterthur_Badge.png"
-      object-fit="scale-down"
-      height="200"
-    />
+    <p>Gratulation! Du kannst dir deinen Preis bei einer der drei Partnerorganisationen abholen.</p>
+    <n-space justify="space-around">
+      <n-image preview-disabled src="/assets/Logo_RettungdienstWinterthur.png" object-fit="scale-down" height="80" />
+      <n-image preview-disabled src="/assets/SIW-Badge_pos.png" object-fit="scale-down" height="80" />
+      <n-image preview-disabled src="/assets/Stapo_Winterthur_Badge.png" object-fit="scale-down" height="80" />
+    </n-space>
     <div>
       <n-button @click="showModal = true">Neu starten</n-button>
     </div>

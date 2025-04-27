@@ -1,26 +1,34 @@
 <template>
   <div class="sicherheitstag">
     <div class="content">
-      <n-image width="290" src="/assets/RDW_Sugi_quer.jpg" object-fit="scale-down" height="200"></n-image>
-      <p class="text">{{ question }}</p>
-      <div class="answers-grid">
-        <div class="grid-container">
-          <n-button
-            v-for="(answer, index) in answers"
-            :key="index"
-            class="answer-button"
-            :type="selectedAnswers.includes(answer) ? 'info' : 'default'"
-            @click="toggleAnswer(answer)"
-            :disabled="isCorrect"
-          >
-            {{ answer }}
+      <n-image
+        v-if="isCorrect"
+        width="290"
+        src="/assets/RDW_Sugi_quer.jpg"
+        object-fit="scale-down"
+        height="200"
+      ></n-image>
+      <div v-if="!isCorrect">
+        <p class="text">{{ question }}</p>
+        <div class="answers-grid">
+          <div class="grid-container">
+            <n-button
+              v-for="(answer, index) in answers"
+              :key="index"
+              class="answer-button"
+              :type="selectedAnswers.includes(answer) ? 'info' : 'default'"
+              @click="toggleAnswer(answer)"
+              :disabled="isCorrect"
+            >
+              {{ answer }}
+            </n-button>
+          </div>
+        </div>
+        <div class="submit-button">
+          <n-button round type="info" @click="handleSubmit" :disabled="isCorrect">
+            <n-icon :component="PaperPlane" />
           </n-button>
         </div>
-      </div>
-      <div class="submit-button">
-        <n-button round type="info" @click="handleSubmit" :disabled="isCorrect">
-          <n-icon :component="PaperPlane" />
-        </n-button>
       </div>
       <div v-if="isCorrect">
         <p class="text">
@@ -52,7 +60,7 @@ import { PaperPlane, CheckCircle, TimesCircle } from '@vicons/fa'
 import { useAnswerStore } from '@/stores/answers'
 
 const answerStore = useAnswerStore()
-const question = ref('Wozu benutzt der Rettungsdienst eine Sugi ?')
+const question = ref('Wozu benutzt der Rettungsdienst eine Sugi? (Mehrfachantwort)')
 const answers = ref(['Absaugen von Luft', 'Aufblasen der Trage', 'Entfernen von Sekret', 'Reinigen des Rettungswagen'])
 const correctAnswers = [answers.value[0], answers.value[2]]
 
@@ -92,7 +100,7 @@ const handleSubmit = () => {
 }
 
 .content {
-  margin-top: 20px;
+  margin-top: 0px;
   width: 100%;
   max-width: 600px;
 }
@@ -124,6 +132,5 @@ const handleSubmit = () => {
 
 .text {
   font-size: large;
-  margin: 15px 0;
 }
 </style>
